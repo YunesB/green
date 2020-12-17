@@ -54,6 +54,8 @@
   text-decoration: none;
   color: unset;
   transition: 0.2s;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .header__link:hover {
@@ -103,7 +105,6 @@
 }
 
 .content {
-  max-width: 1265px;
   width: 100%;
   padding: 0;
   margin: 0 auto;
@@ -121,6 +122,8 @@
   background-position: center;
   margin-top: 50px;
   border-bottom: 1px solid black;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .search__caption {
@@ -180,4 +183,133 @@
 .search__icon {
   height: 20px;
   margin-right: 20px;
+}
+
+.initiatives {
+  width: 100%;
+  background-color: #e5e5e5;
+  margin: 0 auto;
+}
+
+.initiatives__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 100%;
+}
+
+.initiatives__heading {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 24px;
+}
+
+.categories {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+.categories__item {
+  width: 192px;
+  height: 48px;
+  background-color: #e8f8e8;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.categories__item:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.categories__item_selected {
+  background: #55e055;
+}
+
+.cards {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 0;
+}
+
+.card {
+  padding: 15px;
+  width: 100%;
+  max-width: 310px;
+  height: 400px;
+  background-color: #e8f8e8;
+}
+
+.card__heading {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card__text {
+  max-height: 60%;
+  overflow-y: scroll;
+}
+
+.card__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__text::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card__text::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.card__text::-webkit-scrollbar-thumb {
+  background: #55e055;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.card__like-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: unset;
+  border: none;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.card__button_like {
+  background-image: url("../../images/like_icon.svg");
+}
+
+.card__button_dislike {
+  background-image: url("../../images/dislike_icon.svg");
 }
