@@ -25,14 +25,12 @@ class Constructor {
         this._element = this._getTemplate();
         this._element.querySelector('.name').textContent = this._name;
         this._element.querySelector('.author').textContent = this._author;
-        this._element.querySelector('.text').textContent = this._text;
         this._styleStr(this._externalStr);
-        console.log(typeof this._text);
+        this._element.querySelector('.text').innerHTML = this._text;
         return this._element;
     }
-
     _styleStr (data) {
-        return this._text.replace(data, `<span class="highlighted-word">${data}</span>`);
+        this._text = this._text.replace(data, `<span class="highlighted-word">${data}</span>`);
     }
 }
 
@@ -54,7 +52,7 @@ function onSubmit(evt) {
     submit.disabled = true;
     getAnswer(inputValue)
     .then(res => {
-        for (i=0; i<5; i++) { // i<5 поменять на i<res.length
+        for (i=0; i<res.length; i++) { // i<5 поменять на i<res.length
             const newItem = createListItem(res[i].fields, 'template', inputValue);
             myList.append(newItem);        
         }
