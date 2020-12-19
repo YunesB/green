@@ -16,7 +16,7 @@
         </a>
         <div class="header__container">
           <ul class="header__links">
-            <li class="header__link-item"><a href="#" class="header__link">О Проекте</a></li>
+            <li class="header__link-item"><a href="#" class="header__link" id="about">О Проекте</a></li>
             <li class="header__link-item"><a href="#" class="header__link">Контакты</a></li>
             <li class="header__link-item"><a href="#" class="header__link">Инициативы на рассмотрении</a></li>
           </ul>
@@ -24,7 +24,7 @@
             <input type="text" class="header__input" placeholder="Поиск по сайту">
             <button type="submit" class="header__submit"></button>
           </form>
-          <a href="#"><img src="./images/user_icon.svg" class="header__userpic"></a>
+          <button type="button" class="header__userpic-button"><img src="./images/user_icon.svg" class="header__userpic"></button>
         </div>
       </nav>
     </header>
@@ -34,85 +34,33 @@
         <h1 class="add-initiative__caption">Проект “<span class="green-coloring">ГР</span>ажданская <span class="green-coloring">ИН</span>ициатива” - не оставайтесь равнодушными, вносите и голосуйте за инициативы, от которых зависит наше будущее!</h1>
         <div class="add-initiative__box">
           <a href="#newInitiative" class="add-initiative__link">Внести инициативу</a>
-          <p class="add-initiative__sub-text">Постановление о внесении инициативы в стихотворной форме (?)</p>
+          <p class="add-initiative__sub-text">Постановление о внесении инициативы в стихотворной форме <button type="button" class="add-initiative__show-hint">?</button></p>
+          <div class="add-initiative__hint-box" id="hintPopup">
+            <p class="add-initiative__hint-text">В связи с действующим законодательством, с 01.01.2025 г. к рассмотрению принимаются только инициативы, сформулированные с использованием цитат поэтов-классиков.</p>
+            <button class="popup__close"></button>
+          </div>
         </div>
       </section>
 
       <section class="initiatives">
         <div class="initiatives__container">
           <h2 class="initiative_heading">Текущие инициативы</h2>
-          <select class="categories">
-            <option disabled selected>Выберите категорию</option>
-            <option>Благоустройство</option>
-            <option>Пластик</option>
-            <option>Мусор</option>
-            <option>Животные</option>
-            <option>Алкоголь и курение</option>
-            <option>Без фильтра</option>
-           </select>
+          <div class="initiatives__nav">
+            <select class="categories">
+              <option disabled selected>Выберите категорию</option>
+              <option>Благоустройство</option>
+              <option>Пластик</option>
+              <option>Мусор</option>
+              <option>Животные</option>
+              <option>Алкоголь и курение</option>
+              <option>Без фильтра</option>
+            </select>
+            <div class="initiatives__arrows">
+              <button type="button" class="initiatives__arrow initiatives__arrow_left"></button>
+              <button type="button" class="initiatives__arrow initiatives__arrow_right"></button>
+            </div>
+          </div>
           <ul class="cards">
-            <li class="card">
-              <h3 class="card__heading">Ответственность за громкую музыку в автомобилях, а также за езду без глушителя в дневное и ночное время</h3>
-              <p class="card__text">
-                Не мысля гордый свет забавить,<br>
-                Вниманье дружбы возлюбя,<br>
-                Хотел бы я тебе представить<br>
-                Залог достойнее тебя,<br>
-                Достойнее души прекрасной,<br>
-                Святой исполненной мечты,<br>
-                Поэзии живой и ясной,<br>
-                Высоких дум и простоты;<br>
-                Но так и быть — рукой пристрастной<br>
-                Прими собранье пестрых глав,<br>
-                Полусмешных, полупечальных,<br>
-                Простонародных, идеальных,<br>
-                Небрежный плод моих забав,<br>
-                Бессонниц, легких вдохновений,<br>
-                Незрелых и увядших лет,<br>
-                Ума холодных наблюдений<br>
-              </p>
-              <div class="card__box">
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_like"></button>
-                  <p class="card__like-counter">0</p>
-                </div>
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_dislike"></button>
-                  <p class="card__dislike-counter">0</p>
-                </div>
-              </div>
-            </li>
-            <li class="card">
-              <h3 class="card__heading">Ответственность за громкую музыку в автомобилях, а также за езду без глушителя в дневное и ночное время</h3>
-              <p class="card__text">
-                Не мысля гордый свет забавить,<br>
-                Вниманье дружбы возлюбя,<br>
-                Хотел бы я тебе представить<br>
-                Залог достойнее тебя,<br>
-                Достойнее души прекрасной,<br>
-                Святой исполненной мечты,<br>
-                Поэзии живой и ясной,<br>
-                Высоких дум и простоты;<br>
-                Но так и быть — рукой пристрастной<br>
-                Прими собранье пестрых глав,<br>
-                Полусмешных, полупечальных,<br>
-                Простонародных, идеальных,<br>
-                Небрежный плод моих забав,<br>
-                Бессонниц, легких вдохновений,<br>
-                Незрелых и увядших лет,<br>
-                Ума холодных наблюдений<br>
-              </p>
-              <div class="card__box">
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_like"></button>
-                  <p class="card__like-counter">0</p>
-                </div>
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_dislike"></button>
-                  <p class="card__dislike-counter">0</p>
-                </div>
-              </div>
-            </li>
             <li class="card">
               <h3 class="card__heading">Ответственность за громкую музыку в автомобилях, а также за езду без глушителя в дневное и ночное время</h3>
               <p class="card__text">
@@ -212,12 +160,28 @@
 
       <section class="new-initiative" id="newInitiative">
         <h3 class="new-initiative__heading">Внести инициативу</h3>
-        <!-- <form class="new-initiative__form">
-          <input type="text" placeholder="Имя и Фамилия">
-          <input type="email" placeholder="Email">
-          <textarea type="text" placeholder="Введите стих"></textarea>
-        </form>
-      </section> -->
+        <div class="new-initiative__container">
+          <form class="new-initiative__form">
+            <h4 class="new-initiative__sub-heading">Заполните форму, чтобы подать заявку:</h4>
+            <input type="text" class="new-initiative__input" placeholder="Имя и Фамилия">
+            <input type="email" class="new-initiative__input" placeholder="Email">
+            <input type="text" class="new-initiative__input" placeholder="Номер документа">
+            <textarea type="text" class="new-initiative__input new-initiative__input_textarea" placeholder="Введите текст стиха сюда"></textarea>
+            <button type="submit" class="new-initiative__submit" id="submitInitiative">Отправить</button>
+          </form>
+          <form class="new-initiative__form-poem">
+            <h4 class="new-initiative__sub-heading">Найдите стих по ключевым словам:</h4>
+            <input type="text" class="new-initiative__input" id="inputPoem" placeholder="Введите ключевое слово" minlength="2" maxlength="15" validate>
+            <div class="new-initiative__buttons">
+              <button type="submit" class="new-initiative__submit" id="searchPoem">Найти стих</button>
+              <button type="reset" class="new-initiative__submit" id="refreshList">Обновить</button>
+            </div>
+            <ul class="poem__list" id="poemList">
+            </ul>
+          </form>
+        </div>
+      </section>
+
     </main>
     <footer class="footer">
       <div class="footer__container">
@@ -275,7 +239,29 @@
         </div>
       </div>
     </footer>
-
-</div>
+    <div class="popup" id="aboutPopup">
+      <div class="popup__container">
+        <h3 class="popup__heading"><span class="green-coloring">ГРИН</span> – интернет-ресурс для размещения и рассмотрения экологических общественных инициатив</h3>
+        <p class="popup__text">Ресурс позволяет подать свою инициативу, ознакомиться с размещенными инициативами, проголосовать “за” или “против” размещенных инициатив, получить информацию о ходе и результатах реализации общественной инициативы.</p>
+        <p class="popup__text">Для того, чтобы подать инициативу или проголосовать за инициативу, нужно:</p>
+        <ul class="popup__list"> 
+          <li>Быть гражданином России старше 18 лет;</li>
+          <li>Иметь доступ к компьютеру, подключенному к Интернету;</li>
+          <li>Быть зарегистрированным на портале www.grin.ru;</li>
+          <li>Иметь сформулированную инициативу для того, чтобы предложить ее местным органам власти.</li>
+        </ul>
+        <p class="popup__text">Интернет-ресурс функционирует с применением единой системы авторизации и аутентификации: один человек – один голос.</p>
+        <button class="popup__close"></button>
+      </div>
+    </div>
+  </div>
+  <template id="poemTemplate">
+    <li class="poem__list-item">
+        <h4 class="poem__name"></h4>
+        <pre><p class="poem__text"></p></pre>
+        <p class="poem__author"></p>
+        <button type="button" class="poem__button">Скопировать текст</button>
+    </li>
+</template>
 </body>
 </html>
