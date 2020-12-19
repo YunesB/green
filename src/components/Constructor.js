@@ -20,11 +20,19 @@ export class Constructor {
         this._element.querySelector('.poem__name').textContent = this._name;
         this._element.querySelector('.poem__author').textContent = this._author;
         this._styleStr(this._externalStr);
+        this._copyText();
         this._element.querySelector('.poem__text').innerHTML = this._text;
-        console.log(this._element)
         return this._element;
     }
     _styleStr (data) {
         this._text = this._text.replace(data, `<span class="highlighted-word">${data}</span>`);
+    }
+
+    _copyText() {
+        this._element.querySelector('.poem__button').addEventListener('click', () => {
+            this._text.selection();
+            document.execCommand("copy");
+            alert("Copied the text: " + copyText);
+        })
     }
 }
