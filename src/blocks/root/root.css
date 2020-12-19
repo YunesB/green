@@ -7,6 +7,9 @@
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   background-color: #eae9e9;
+  /* background-image: url("../../images/main_bg_dark.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
   min-height: 100vh;
   height: 100%;
   color: black;
@@ -56,7 +59,7 @@
 }
 
 .header__link:hover {
-  color: #2e942e;
+  color: black;
   opacity: 0.7;
   /* padding-bottom: 2px;
   border-bottom: 1px solid #2e942e; */
