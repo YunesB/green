@@ -22,12 +22,12 @@ export class Popup {
 
     setEventListeners() {
         this._popup.addEventListener('click', (evt) => {
-            if (!evt.target.closest('.popup__container') && !evt.target.closest('.popup__img-container')) {
+            if (!evt.target.closest('.popup__container')) {
                 this.close();
             }
         });
         
-        this._popup.querySelector('.popup__close').addEventListener('click', () => {
+        this._popup.querySelector('.popup__close' || 'popup__close_alt').addEventListener('click', () => {
             this.close();
         });
     }

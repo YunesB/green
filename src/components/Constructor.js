@@ -30,7 +30,7 @@ export class Constructor {
 
     _copyText() {
         this._element.querySelector('.poem__button').addEventListener('click', () => {
-            this._text.selection();
+            this._text.select();
             document.execCommand("copy");
             alert("Copied the text: " + copyText);
         })
