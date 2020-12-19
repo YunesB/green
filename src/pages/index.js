@@ -1,6 +1,7 @@
 import './index.css';
 import {Popup} from '../components/Popup.js';
 import {Constructor} from '../components/Constructor.js'
+import '../components/Scroll.js';
 
 const aboutLink = document.getElementById('about');
 const hintButton = document.querySelector('.add-initiative__show-hint');

@@ -803,3 +803,22 @@
 .highlighted-word {
   background-color: yellow;
 }
+
+.scroll-up {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  border: 1px solid #55e055;
+  background-color: unset;
+  opacity: 0.5;
+  transition: 0.2s;
+  text-decoration: none;
+  padding: 10px 15px;
+  color: #55e055;
+  border-radius: 5px;
+}
+
+.scroll-up:hover {
+  opacity: 1;
+  cursor: pointer;
+}
