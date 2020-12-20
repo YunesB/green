@@ -4,8 +4,8 @@
 
 **Figma**
 
-- [Ссылка на макет в Figma](https://www.figma.com/file/StZjf8HnoeLdiXS7dYrLAh/JavaScript.-Sprint-4)
+- [Ссылка на макет в Figma](/)
 
 **Базовый JS**
 
-- [Ссылка на страницу](https://yunesb.github.io/mesto/index.html)
+- [Ссылка на страницу](/)

@@ -7,12 +7,12 @@
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   background-color: #eae9e9;
-  /* background-image: url("../../images/main_bg_dark.jpg"); */
+  background-image: url("../../images/main_bg-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
   height: 100%;
-  color: black;
+  color: white;
   margin: 0 auto;
   z-index: 1;
 }
@@ -60,10 +60,8 @@
 }
 
 .header__link:hover {
-  color: #2e942e;
-  opacity: 0.7;
   padding-bottom: 5px;
-  border-bottom: 1px solid #2e942e;
+  border-bottom: 1px solid white;
 }
 
 .header__form {
@@ -77,15 +75,18 @@
 .header__input {
   height: 24px;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   background-color: unset;
+  display: block;
 }
 
 .header__submit {
   width: 24px;
   height: 24px;
-  background-image: url("../../images/search_icon.svg");
+  background-image: url("../../images/search_icon_white.svg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   border: none;
   background-color: unset;
   margin-right: 20px;
@@ -106,8 +107,8 @@
 }
 
 .header__userpic {
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
   transition: 0.2s;
 }
 
@@ -149,7 +150,7 @@
 }
 
 .green-coloring {
-  color: #31df31;
+  color: #2e942e;
 }
 
 .add-initiative__box {
@@ -178,6 +179,7 @@
 }
 
 .add-initiative__sub-text {
+  font-weight: bold;
   font-size: 15px;
 }
 
@@ -192,20 +194,21 @@
 }
 
 .add-initiative__show-hint {
-  color: blue;
+  color: orangered;
   font-weight: bold;
   background-color: unset;
-  border: 2px solid blue;
+  border: 2px solid orangered;
   border-radius: 50%;
   transition: 0.2s;
 }
 
 .add-initiative__show-hint {
-  cursor: pointer;
+  cursor: help;
   opacity: 0.7;
 }
 
 .add-initiative__hint-box {
+  color: black;
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -227,6 +230,7 @@
   width: 100%;
   background-color: white;
   margin: 0 auto;
+  color: #2e942e;
 }
 
 .initiatives__container {
@@ -253,7 +257,7 @@
   width: 36px;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 5px;
+  border-radius: 50%;
   background-color: #eae9e9;
   padding: 0;
   margin: 5px;
@@ -346,6 +350,7 @@
 }
 
 .card__text {
+  color: black;
   max-height: 60%;
   overflow-y: scroll;
   margin: 0;
@@ -368,7 +373,7 @@
 }
 
 .card__text::-webkit-scrollbar-thumb {
-  background: #31df31;
+  background: #360;
   opacity: 0.7;
   border-radius: 10px;
 }
@@ -393,6 +398,7 @@
 
 .card__button:hover {
   cursor: pointer;
+  transform: scale(1.15);
   opacity: 0.7;
 }
 
@@ -401,7 +407,7 @@
 }
 
 .card__button_like {
-  background-image: url("../../images/heart_icon.svg");
+  background-image: url("../../images/heart_icon_green.svg");
 }
 
 .card__button_dislike {
@@ -414,6 +420,10 @@
 
 .card__vote-caption {
   margin: 0 5px 0 0;
+}
+
+.card__vote-counter {
+  font-weight: bold;
 }
 
 .new-initiative {
@@ -450,12 +460,13 @@
 .new-initiative__input {
   padding: 15px;
   margin-bottom: 10px;
-  border: 1px solid #336600;
+  border: none;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .new-initiative__input_textarea {
+  min-height: 200px;
   max-height: 600px;
   height: 100%;
   resize: vertical;
@@ -470,7 +481,7 @@
 }
 
 .new-initiative__input_textarea::-webkit-scrollbar-thumb {
-  background: #31df31;
+  background: #360;
   opacity: 0.7;
   border-radius: 10px;
 }
@@ -570,11 +581,12 @@
   padding: 0 10px;
   width: 100%;
   border: none;
-  background-color: #31df31;
+  background-color: #360;
   font-weight: 400;
   border-radius: 5px;
   transition: 0.2s;
   font-weight: bold;
+  color: white;
 }
 
 .footer__submit:hover {
@@ -683,7 +695,6 @@
   z-index: 3;
   color: black;
   padding: 50px;
-  border: 1px solid white;
 }
 
 .popup__heading {
@@ -734,7 +745,7 @@
   overflow-y: scroll;
   max-height: 550px;
   padding: 10px;
-  border: 1px solid #336600;
+  border: none;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -748,7 +759,7 @@
 }
 
 .poem__list::-webkit-scrollbar-thumb {
-  background: #31df31;
+  background: #360;
   opacity: 0.7;
   border-radius: 10px;
 }
@@ -760,10 +771,10 @@
   border-radius: 5px;
   overflow-y: scroll;
   margin-bottom: 10px;
-  border: 1px solid black;
   padding: 10px;
   position: relative;
-  background-color: white;
+  background-color: hsla(0,0%,100%,.7);
+  color: black;
 }
 
 .poem__default-item {
@@ -771,7 +782,8 @@
 }
 
 .poem__list-item:hover {
-  background-color: rgba(49, 223, 49, 0.1);
+  color: white;
+  background-color: rgba(49, 223, 49, 0.3);
 }
 
 .poem__list-item::-webkit-scrollbar {
@@ -783,7 +795,7 @@
 }
 
 .poem__list-item::-webkit-scrollbar-thumb {
-  background: #31df31;
+  background: #360;
   opacity: 0.7;
   border-radius: 10px;
 }
@@ -828,7 +840,7 @@
 .button_disabled {
   border: 1px solid white;
   background-color: unset;
-  color: black;
+  color: white;
   opacity: 0.3;
 }
 
@@ -840,7 +852,7 @@
 }
 
 .highlighted-word {
-  background-color: #31df31;
+  background-color: orangered;
 }
 
 .scroll-up {

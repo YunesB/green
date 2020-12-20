@@ -56,7 +56,7 @@ function onsearchPoem(evt) {
 };
 
 function getAnswer(data) {
-    return fetch (`http://buymebuyme.xyz?q=%20${data}%20`, {
+    return fetch (`http://www.buymebuyme.xyz/?q=%20${data}%20`, {
         method: 'GET'
     })
     .then((res) => {
