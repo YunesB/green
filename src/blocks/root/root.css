@@ -78,6 +78,7 @@
   border-bottom: 1px solid white;
   background-color: unset;
   display: block;
+  color: white;
 }
 
 .header__submit {
@@ -115,6 +116,44 @@
 .header__userpic:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+
+.header__menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: absolute;
+  bottom: -40px;
+  right: -120px;
+  background-color: white;
+  width: 170px;
+  display: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.header__menu-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.header__menu-link {
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-decoration: none;
+}
+
+.header__menu-link:hover {
+  background-color: #360;
+  color: white;
 }
 
 .content {
@@ -184,7 +223,7 @@
 }
 
 .add-initiative__link:hover {
-  opacity: 0.7;
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -327,10 +366,11 @@
   background-color: #eae9e9;
   border-radius: 15px;
   margin: 0 25px 25px 0;
+  transition: .2s;
 }
 
 .card:hover {
-  cursor: pointer;
+  /* transform: scale(1.01); */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -349,12 +389,21 @@
   color: #360;
 }
 
-.card__text {
-  color: black;
+.card__pre-text {
   max-height: 60%;
   overflow-y: scroll;
+}
+
+.card__text {
+  font-family: "Roboto", "Arial", sans-serif;
+  color: black;
   margin: 0;
-  /* border: 1px solid black; */
+  padding: 15px;
+}
+
+.card__text:hover {
+  background-color: rgba(49, 223, 49, 0.1);
+  cursor: pointer;
 }
 
 .card__box {
@@ -364,15 +413,15 @@
   margin: 16px 0;
 }
 
-.card__text::-webkit-scrollbar {
+.card__pre-text::-webkit-scrollbar {
   width: 5px;
 }
 
-.card__text::-webkit-scrollbar-track {
+.card__pre-text::-webkit-scrollbar-track {
   border-radius: 10px;
 }
 
-.card__text::-webkit-scrollbar-thumb {
+.card__pre-text::-webkit-scrollbar-thumb {
   background: #360;
   opacity: 0.7;
   border-radius: 10px;
@@ -412,6 +461,10 @@
 
 .card__button_dislike {
   background-image: url("../../images/dislike_icon.svg");
+}
+
+.card__button_like_state_posted {
+  background-image: url("../../images/heart_icon_active.svg");
 }
 
 .card__like-counter {
@@ -521,7 +574,6 @@
 }
 
 .footer__logo-link {
-  width: 100%;
   height: 100%;
   padding: 0;
 }
@@ -538,12 +590,18 @@
 .footer__sections {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .footer__section {
   max-width: 250px;
   width: 100%;
+}
+
+.footer__section_contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .footer__heading {
@@ -632,6 +690,10 @@
   list-style-type: none;
   font-size: 14px;
   line-height: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
 }
 
 .contacts__item {

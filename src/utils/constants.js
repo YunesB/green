@@ -1,26 +1,174 @@
-export const allSelectorClasses = {
-    formSelector: '.popup__form',
-    inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__button',
-    inactiveButtonClass: 'popup__button_disabled',
-    inputErrorClass: 'popup__input_data_error',
-    errorClass: 'popup__error_visible'
-};
+export const initialCards = [{
+    header: 'Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км',
+    poem: 
+`Не мысля гордый свет забавить,
+Вниманье дружбы возлюбя,
+Хотел бы я тебе представить
+Залог достойнее тебя,
+Достойнее души прекрасной,
+Святой исполненной мечты,
+Поэзии живой и ясной,
+Высоких дум и простоты;
+Но так и быть — рукой пристрастной
+Прими собранье пестрых глав,
+Полусмешных, полупечальных,
+Простонародных, идеальных,
+Небрежный плод моих забав,
+Бессонниц, легких вдохновений,
+Незрелых и увядших лет,
+Ума холодных наблюдений
+И сердца горестных замет.`,
+    dataTag: 'welfare',
+    likes: '2514'
+    },
 
-export const popupOpen = document.querySelector('.profile-info__customization');
-export const popupOpenCard = document.querySelector('.profile__button');
-export const popupOpenAvatar = document.querySelector('.profile-info__avatar-customizaton');
-export const userAvatar = document.querySelector('.profile-info__image');
+    {
+    header: 'Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км',
+    poem: 
+`Не мысля гордый свет забавить,
+Вниманье дружбы возлюбя,
+Хотел бы я тебе представить
+Залог достойнее тебя,
+Достойнее души прекрасной,
+Святой исполненной мечты,
+Поэзии живой и ясной,
+Высоких дум и простоты;
+Но так и быть — рукой пристрастной
+Прими собранье пестрых глав,
+Полусмешных, полупечальных,
+Простонародных, идеальных,
+Небрежный плод моих забав,
+Бессонниц, легких вдохновений,
+Незрелых и увядших лет,
+Ума холодных наблюдений
+И сердца горестных замет.`,
+    dataTag: 'plastic',
+    likes: '754'
+    },
 
-export const formAvatar = document.forms.popupFormAvatar;
-export const infoInputAvatar = formAvatar.elements.link;
+    {
+    header: 'Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км',
+    poem: 
+`Не мысля гордый свет забавить,
+Вниманье дружбы возлюбя,
+Хотел бы я тебе представить
+Залог достойнее тебя,
+Достойнее души прекрасной,
+Святой исполненной мечты,
+Поэзии живой и ясной,
+Высоких дум и простоты;
+Но так и быть — рукой пристрастной
+Прими собранье пестрых глав,
+Полусмешных, полупечальных,
+Простонародных, идеальных,
+Небрежный плод моих забав,
+Бессонниц, легких вдохновений,
+Незрелых и увядших лет,
+Ума холодных наблюдений
+И сердца горестных замет.`,
+    dataTag: 'garbage',
+    likes: '648'
+    },
 
-export const formInfo = document.forms.popupFormInfo;
-export const nameInput = formInfo.elements.name;
-export const infoInput = formInfo.elements.info;
+    {
+    header: 'Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км',
+    poem: 
+`Не мысля гордый свет забавить,
+Вниманье дружбы возлюбя,
+Хотел бы я тебе представить
+Залог достойнее тебя,
+Достойнее души прекрасной,
+Святой исполненной мечты,
+Поэзии живой и ясной,
+Высоких дум и простоты;
+Но так и быть — рукой пристрастной
+Прими собранье пестрых глав,
+Полусмешных, полупечальных,
+Простонародных, идеальных,
+Небрежный плод моих забав,
+Бессонниц, легких вдохновений,
+Незрелых и увядших лет,
+Ума холодных наблюдений
+И сердца горестных замет.`,
+    dataTag: 'animals',
+    likes: '325'
+    },
 
-export const formCard = document.forms.popupFormCard;
-export const nameInputCard = formCard.elements.name;
-export const infoInputCard = formCard.elements.link;
+    {
+    header: 'Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км',
+    poem: 
+`Не мысля гордый свет забавить,
+Вниманье дружбы возлюбя,
+Хотел бы я тебе представить
+Залог достойнее тебя,
+Достойнее души прекрасной,
+Святой исполненной мечты,
+Поэзии живой и ясной,
+Высоких дум и простоты;
+Но так и быть — рукой пристрастной
+Прими собранье пестрых глав,
+Полусмешных, полупечальных,
+Простонародных, идеальных,
+Небрежный плод моих забав,
+Бессонниц, легких вдохновений,
+Незрелых и увядших лет,
+Ума холодных наблюдений
+И сердца горестных замет.
+Не мысля гордый свет забавить,
+Вниманье дружбы возлюбя,
+Хотел бы я тебе представить
+Залог достойнее тебя,
+Достойнее души прекрасной,
+Святой исполненной мечты,
+Поэзии живой и ясной,
+Высоких дум и простоты;
+Но так и быть — рукой пристрастной
+Прими собранье пестрых глав,
+Полусмешных, полупечальных,
+Простонародных, идеальных,
+Небрежный плод моих забав,
+Бессонниц, легких вдохновений,
+Незрелых и увядших лет,
+Ума холодных наблюдений
+И сердца горестных замет.`,
+    dataTag: 'smoke',
+    likes: '9343'
+    },
 
-export const popupLoading = document.getElementById('popupLoading');
+    {
+    header: 'Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км',
+    poem:
+`Не мысля гордый свет забавить,
+Вниманье дружбы возлюбя,
+Хотел бы я тебе представить
+Залог достойнее тебя,
+Достойнее души прекрасной,
+Святой исполненной мечты,
+Поэзии живой и ясной,
+Высоких дум и простоты;
+Но так и быть — рукой пристрастной
+Прими собранье пестрых глав,
+Полусмешных, полупечальных,
+Простонародных, идеальных,
+Небрежный плод моих забав,
+Бессонниц, легких вдохновений,
+Незрелых и увядших лет,
+Ума холодных наблюдений
+И сердца горестных замет.`,
+    dataTag: 'welfare',
+    likes: '8100'
+    }
+];
+
+export const aboutLink = document.getElementById('about');
+export const hintButton = document.querySelector('.add-initiative__show-hint');
+export const searchPoem = document.getElementById('searchPoem');
+export const refreshList = document.getElementById('refreshList');
+export const inputPoem = document.getElementById('inputPoem');
+export const poemList = document.getElementById('poemList');
+export const errorMessage = document.querySelector('.poem__default-item');
+export const poemTextarea = document.getElementById('poemTextarea');
+export const categories = document.getElementById('categories');
+export const cardsList = document.querySelector('.cards');
+export const userElement = document.querySelector('.header__userpic');
+export const userMenu = document.querySelector('.header__menu');

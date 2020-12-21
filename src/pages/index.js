@@ -1,15 +1,13 @@
 import './index.css';
 import {Popup} from '../components/Popup.js';
-import {Constructor} from '../components/Constructor.js'
+import {Constructor} from '../components/Constructor.js';
+import {Card} from '../components/Card.js';
+import {initialCards} from '../../src/utils/constants.js';
 
-const aboutLink = document.getElementById('about');
-const hintButton = document.querySelector('.add-initiative__show-hint');
-const searchPoem = document.getElementById('searchPoem');
-const refreshList = document.getElementById('refreshList');
-const inputPoem = document.getElementById('inputPoem');
-const poemList = document.getElementById('poemList');
-const errorMessage = document.querySelector('.poem__default-item');
-const poemTextarea = document.getElementById('poemTextarea');
+import {aboutLink, hintButton, searchPoem, refreshList,
+    inputPoem, poemList, errorMessage, poemTextarea,
+    categories, cardsList, userElement, userMenu
+    } from '../../src/utils/constants.js';
 
 const aboutPopup = new Popup('aboutPopup');
 aboutPopup.setEventListeners();
@@ -17,11 +15,14 @@ aboutPopup.setEventListeners();
 const hintPopup = new Popup('hintPopup');
 hintPopup.setEventListeners();
 
+const cardPopup = new Popup('initiativePopup');
+cardPopup.setEventListeners();
+
 
 function createListItem(data, template, inputValue, inputSelector) {
     const newConstructor = new Constructor(data, template, inputValue, inputSelector);
     return newConstructor.generateItem();
-}
+};
 
 function clearList(list) {
     list.innerHTML = ""
@@ -29,7 +30,7 @@ function clearList(list) {
     searchPoem.disabled = false;
     poemList.classList.remove('display-item');
     errorMessage.classList.remove('display-item');
-}
+};
 
 
 function onsearchPoem(evt) {
@@ -55,6 +56,39 @@ function onsearchPoem(evt) {
     })
 };
 
+function filterCards(list) {
+    for (let item of list) {
+        if (item.dataset.tags === categories.value || categories.value === '') {
+            console.log(item.dataset.tags)
+            item.style.opacity = '1';
+            item.style.filter = 'grayscale(0)';
+        } else {
+            item.style.opacity = '.3';
+            item.style.filter = 'grayscale(100%)';
+        }
+    }
+};
+
+categories.onchange = function() {
+    filterCards(cardsFilter);
+};
+
+const createCard = (data) => {
+    const card = new Card({
+        data,
+        handleCardClick: () => {cardPopup.open()}
+        }, "#cardTemplate");
+        
+    const cardElement = card.generateCard();
+    cardsList.prepend(cardElement);
+};
+
+initialCards.forEach((item) => {
+    createCard(item);
+})
+
+const cardsFilter = document.querySelectorAll('.card');
+
 function getAnswer(data) {
     return fetch (`https://www.buymebuyme.xyz/?q=%20${data}%20`, {
         method: 'GET'
@@ -68,8 +102,17 @@ function getAnswer(data) {
 };
 
 searchPoem.addEventListener('click', onsearchPoem);
+document.addEventListener('click', (evt) => {
+    if (evt.target === userElement) {
+        userMenu.classList.add('display-item');
+    } else {
+        userMenu.classList.remove('display-item');
+    }
+});
+
 refreshList.addEventListener('click', () => {clearList(poemList)})
 aboutLink.addEventListener('click', () => {aboutPopup.open()});
+
 hintButton.addEventListener('mouseover', () => {hintPopup.open()});
 hintButton.addEventListener('mouseout', () => {hintPopup.close()});
 

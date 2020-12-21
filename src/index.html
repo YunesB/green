@@ -25,6 +25,11 @@
             <button type="submit" class="header__submit"></button>
           </form>
           <button type="button" class="header__userpic-button"><img src="./images/user_icon_white.svg" class="header__userpic"></button>
+          <ul class="header__menu">
+            <li class="header__menu-item"><a href="#" class="header__menu-link">Мой профиль</a></li>
+            <li class="header__menu-item"><a href="#" class="header__menu-link">Настройки</a></li>
+            <li class="header__menu-item"><a href="#" class="header__menu-link">Выйти</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -46,214 +51,21 @@
         <div class="initiatives__container">
           <h2 class="initiative_heading">Текущие инициативы</h2>
           <div class="initiatives__nav">
-            <select class="categories">
-              <option disabled selected>Выберите категорию</option>
-              <option>Благоустройство</option>
-              <option>Пластик</option>
-              <option>Мусор</option>
-              <option>Животные</option>
-              <option>Алкоголь и курение</option>
-              <option>Без фильтра</option>
+            <select class="categories" id="categories">
+              <option disabled selected hidden>Выберите категорию</option>
+              <option value="welfare">Благоустройство</option>
+              <option value="plastic">Пластик</option>
+              <option value="garbage">Мусор</option>
+              <option value="animals">Животные</option>
+              <option value="smoke">Алкоголь и курение</option>
+              <option value="">Без фильтра</option>
             </select>
             <div class="initiatives__arrows">
               <button type="button" class="initiatives__arrow initiatives__arrow_left"></button>
               <button type="button" class="initiatives__arrow initiatives__arrow_right"></button>
             </div>
           </div>
-          <ul class="cards">
-            <li class="card">
-              <h3 class="card__heading">Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км</h3>
-              <p class="card__text">
-                Не мысля гордый свет забавить,<br>
-                Вниманье дружбы возлюбя,<br>
-                Хотел бы я тебе представить<br>
-                Залог достойнее тебя,<br>
-                Достойнее души прекрасной,<br>
-                Святой исполненной мечты,<br>
-                Поэзии живой и ясной,<br>
-                Высоких дум и простоты;<br>
-                Но так и быть — рукой пристрастной<br>
-                Прими собранье пестрых глав,<br>
-                Полусмешных, полупечальных,<br>
-                Простонародных, идеальных,<br>
-                Небрежный плод моих забав,<br>
-                Бессонниц, легких вдохновений,<br>
-                Незрелых и увядших лет,<br>
-                Ума холодных наблюдений<br>
-              </p>
-              <div class="card__box">
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_like"></button>
-                  <p class="card__like-counter">0</p>
-                </div>
-                <p class="card__vote-caption">Всего голосов: <span class="card__vote-counter">2650</span></p>
-                <!-- <div class="card__like-container">
-                  <button type="button" class="card__button card__button_dislike"></button>
-                  <p class="card__dislike-counter">0</p>
-                </div> -->
-              </div>
-            </li>
-            <li class="card">
-              <h3 class="card__heading">Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км</h3>
-              <p class="card__text">
-                Не мысля гордый свет забавить,<br>
-                Вниманье дружбы возлюбя,<br>
-                Хотел бы я тебе представить<br>
-                Залог достойнее тебя,<br>
-                Достойнее души прекрасной,<br>
-                Святой исполненной мечты,<br>
-                Поэзии живой и ясной,<br>
-                Высоких дум и простоты;<br>
-                Но так и быть — рукой пристрастной<br>
-                Прими собранье пестрых глав,<br>
-                Полусмешных, полупечальных,<br>
-                Простонародных, идеальных,<br>
-                Небрежный плод моих забав,<br>
-                Бессонниц, легких вдохновений,<br>
-                Незрелых и увядших лет,<br>
-                Ума холодных наблюдений<br>
-              </p>
-              <div class="card__box">
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_like"></button>
-                  <p class="card__like-counter">0</p>
-                </div>
-                <p class="card__vote-caption">Всего голосов: <span class="card__vote-counter">2650</span></p>
-                <!-- <div class="card__like-container">
-                  <button type="button" class="card__button card__button_dislike"></button>
-                  <p class="card__dislike-counter">0</p>
-                </div> -->
-              </div>
-            </li>
-            <li class="card">
-              <h3 class="card__heading">Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км</h3>
-              <p class="card__text">
-                Не мысля гордый свет забавить,<br>
-                Вниманье дружбы возлюбя,<br>
-                Хотел бы я тебе представить<br>
-                Залог достойнее тебя,<br>
-                Достойнее души прекрасной,<br>
-                Святой исполненной мечты,<br>
-                Поэзии живой и ясной,<br>
-                Высоких дум и простоты;<br>
-                Но так и быть — рукой пристрастной<br>
-                Прими собранье пестрых глав,<br>
-                Полусмешных, полупечальных,<br>
-                Простонародных, идеальных,<br>
-                Небрежный плод моих забав,<br>
-                Бессонниц, легких вдохновений,<br>
-                Незрелых и увядших лет,<br>
-                Ума холодных наблюдений<br>
-              </p>
-              <div class="card__box">
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_like"></button>
-                  <p class="card__like-counter">0</p>
-                </div>
-                <p class="card__vote-caption">Всего голосов: <span class="card__vote-counter">2650</span></p>
-                <!-- <div class="card__like-container">
-                  <button type="button" class="card__button card__button_dislike"></button>
-                  <p class="card__dislike-counter">0</p>
-                </div> -->
-              </div>
-            </li>
-            <li class="card">
-              <h3 class="card__heading">Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км</h3>
-              <p class="card__text">
-                Не мысля гордый свет забавить,<br>
-                Вниманье дружбы возлюбя,<br>
-                Хотел бы я тебе представить<br>
-                Залог достойнее тебя,<br>
-                Достойнее души прекрасной,<br>
-                Святой исполненной мечты,<br>
-                Поэзии живой и ясной,<br>
-                Высоких дум и простоты;<br>
-                Но так и быть — рукой пристрастной<br>
-                Прими собранье пестрых глав,<br>
-                Полусмешных, полупечальных,<br>
-                Простонародных, идеальных,<br>
-                Небрежный плод моих забав,<br>
-                Бессонниц, легких вдохновений,<br>
-                Незрелых и увядших лет,<br>
-                Ума холодных наблюдений<br>
-              </p>
-              <div class="card__box">
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_like"></button>
-                  <p class="card__like-counter">0</p>
-                </div>
-                <p class="card__vote-caption">Всего голосов: <span class="card__vote-counter">2650</span></p>
-                <!-- <div class="card__like-container">
-                  <button type="button" class="card__button card__button_dislike"></button>
-                  <p class="card__dislike-counter">0</p>
-                </div> -->
-              </div>
-            </li>
-            <li class="card">
-              <h3 class="card__heading">Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км</h3>
-              <p class="card__text">
-                Не мысля гордый свет забавить,<br>
-                Вниманье дружбы возлюбя,<br>
-                Хотел бы я тебе представить<br>
-                Залог достойнее тебя,<br>
-                Достойнее души прекрасной,<br>
-                Святой исполненной мечты,<br>
-                Поэзии живой и ясной,<br>
-                Высоких дум и простоты;<br>
-                Но так и быть — рукой пристрастной<br>
-                Прими собранье пестрых глав,<br>
-                Полусмешных, полупечальных,<br>
-                Простонародных, идеальных,<br>
-                Небрежный плод моих забав,<br>
-                Бессонниц, легких вдохновений,<br>
-                Незрелых и увядших лет,<br>
-                Ума холодных наблюдений<br>
-              </p>
-              <div class="card__box">
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_like"></button>
-                  <p class="card__like-counter">0</p>
-                </div>
-                <p class="card__vote-caption">Всего голосов: <span class="card__vote-counter">2650</span></p>
-                <!-- <div class="card__like-container">
-                  <button type="button" class="card__button card__button_dislike"></button>
-                  <p class="card__dislike-counter">0</p>
-                </div> -->
-              </div>
-            </li>
-            <li class="card">
-              <h3 class="card__heading">Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км</h3>
-              <p class="card__text">
-                Не мысля гордый свет забавить,<br>
-                Вниманье дружбы возлюбя,<br>
-                Хотел бы я тебе представить<br>
-                Залог достойнее тебя,<br>
-                Достойнее души прекрасной,<br>
-                Святой исполненной мечты,<br>
-                Поэзии живой и ясной,<br>
-                Высоких дум и простоты;<br>
-                Но так и быть — рукой пристрастной<br>
-                Прими собранье пестрых глав,<br>
-                Полусмешных, полупечальных,<br>
-                Простонародных, идеальных,<br>
-                Небрежный плод моих забав,<br>
-                Бессонниц, легких вдохновений,<br>
-                Незрелых и увядших лет,<br>
-                Ума холодных наблюдений<br>
-              </p>
-              <div class="card__box">
-                <div class="card__like-container">
-                  <button type="button" class="card__button card__button_like"></button>
-                  <p class="card__like-counter">0</p>
-                </div>
-                <p class="card__vote-caption">Всего голосов: <span class="card__vote-counter">2650</span></p>
-                <!-- <div class="card__like-container">
-                  <button type="button" class="card__button card__button_dislike"></button>
-                  <p class="card__dislike-counter">0</p>
-                </div> -->
-              </div>
-            </li>
-          </ul>
+          <ul class="cards" id="cards"></ul>
         </div>
       </section>
 
@@ -285,10 +97,12 @@
     </main>
     <footer class="footer" id="footer">
       <div class="footer__container">
-        <a href="#" class="footer__logo-link">
-          <img src="./images/logo.svg" class="footer__logo" alt="Логотип">
-        </a>
         <div class="footer__sections">
+          <div class="footer__section">
+            <a href="#" class="footer__logo-link">
+              <img src="./images/logo.svg" class="footer__logo" alt="Логотип">
+            </a>
+          </div>
           <div class="footer__section footer__section_news">
             <h3 class="footer__heading">Новости</h3>
             <p class="footer__news-caption">Первыми узнавайте о принятых инициативах</p>
@@ -297,15 +111,6 @@
               <button type="submit" class="footer__submit">Подписаться</button>
             </form>
           </div>
-          <!-- <div class="footer__section footer__section_nav">
-            <h3 class="footer__heading">Полезные ссылки</h3>
-            <ul class="footer__links">
-              <li class="footer__link-item"><a href="#" class="footer__link">О Проекте</a></li>
-              <li class="footer__link-item"><a href="#" class="footer__link">Внести инициативу</a></li>
-              <li class="footer__link-item"><a href="#" class="footer__link">Инициативы на рассмотрении</a></li>
-              <li class="footer__link-item"><a href="#" class="footer__link">Личный кабинет</a></li>
-            </ul>
-          </div> -->
           <div class="footer__section footer__section_contacts">
             <h3 class="footer__heading">Свяжитесь с нами</h3>
             <ul class="contacts">
@@ -354,6 +159,13 @@
         <button class="popup__close"></button>
       </div>
     </div>
+    <div class="popup" id="initiativePopup">
+      <div class="popup__container">
+        <h3 class="popup__heading">Test</h3>
+        <p class="popup__text">Test</p>
+        <button class="popup__close"></button>
+      </div>
+    </div>
     <a href="#header" class="scroll-up">Наверх</a>
   </div>
   <template id="poemTemplate">
@@ -363,6 +175,19 @@
         <p class="poem__author"></p>
         <button type="button" class="poem__button">Выбрать стих</button>
     </li>
-</template>
+  </template>
+  <template id="cardTemplate">
+    <li class="card" data-tags="">
+      <h3 class="card__heading">Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км</h3>
+      <pre class="card__pre-text"><p class="card__text"></p></pre>
+      <div class="card__box">
+        <div class="card__like-container">
+          <button type="button" class="card__button card__button_like"></button>
+          <p class="card__like-counter">0</p>
+        </div>
+        <p class="card__vote-caption">Всего голосов: <span class="card__vote-counter">0</span></p>
+      </div>
+    </li>
+  </template>
 </body>
 </html>
