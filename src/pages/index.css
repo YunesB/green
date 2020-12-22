@@ -2,6 +2,7 @@
 @import url("../vendor/normalize.css");
 @import url("../blocks/root/root.css");
 @import url("../fonts/inter_web/inter.css");
+@import url("../blocks/circle-chart/circle-chart.css");
 
 /* Шапка сайта, блок header */
 @import url("../blocks/header/header.css");

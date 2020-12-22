@@ -1,9 +1,9 @@
 export class Card {
-    constructor({data: {header, poem, dataTag, likes}, handleCardClick}, cardTemplate) {
+    constructor({data: {header, poem, dataTag, votes}, handleCardClick}, cardTemplate) {
         this._header = header,
         this._poem = poem,
         this._dataTag = dataTag,
-        this._likes = likes,
+        this._votes = votes,
         this._handleCardClick = handleCardClick,
         this._cardTemplate = cardTemplate
     }
@@ -20,7 +20,7 @@ export class Card {
         this._element = this._getTemplate();
         this._element.querySelector('.card__heading').textContent = this._header;
         this._element.querySelector('.card__text').textContent = this._poem;
-        this._element.querySelector('.card__vote-counter').textContent = this._likes;
+        this._element.querySelector('.card__vote-counter').textContent = this._votes;
         this._element.dataset.tags = this._dataTag;
         this._setEventListeners();
 

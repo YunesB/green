@@ -81,6 +81,11 @@
   color: white;
 }
 
+.header__input::placeholder {
+  color: white;
+  opacity: .5;
+}
+
 .header__submit {
   width: 24px;
   height: 24px;
@@ -759,10 +764,73 @@
   padding: 50px;
 }
 
+.popup__container_alt-dimensions {
+  max-width: 900px;
+}
+
+.popup__alt-align {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .popup__heading {
   margin: 0 auto 20px;
   text-align: center;
   max-width: 70%;
+}
+
+.popup__heading_colored {
+  color: #360;
+}
+
+.popup__text-container {
+  min-width: 45%;
+  max-width: 55%;
+  border: 2px solid #eae9e9;
+  /* background-color: rgba(49, 223, 49, 0.1); */
+  border-radius: 15px;
+}
+
+.popup__poem-text {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 18px;
+  max-height: 400px;
+  overflow-y: scroll;
+  padding-left: 25px;
+  margin: 0;
+}
+
+.popup__poem-text::-webkit-scrollbar {
+  width: 5px;
+}
+
+.popup__poem-text::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.popup__poem-text::-webkit-scrollbar-thumb {
+  background: #360;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.popup__chart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.popup__votes-info {
+  margin: 25px 0 10px;
+}
+
+.popup__vote-text {
+  margin: 0 0 10px;
+}
+
+.popup__vote-text:last-of-type {
+  margin: 0;
 }
 
 .popup__close {

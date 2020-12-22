@@ -19,7 +19,7 @@ export const initialCards = [{
 Ума холодных наблюдений
 И сердца горестных замет.`,
     dataTag: 'welfare',
-    likes: '2514'
+    votes: '2514'
     },
 
     {
@@ -43,7 +43,7 @@ export const initialCards = [{
 Ума холодных наблюдений
 И сердца горестных замет.`,
     dataTag: 'plastic',
-    likes: '754'
+    votes: '754'
     },
 
     {
@@ -67,7 +67,7 @@ export const initialCards = [{
 Ума холодных наблюдений
 И сердца горестных замет.`,
     dataTag: 'garbage',
-    likes: '648'
+    votes: '648'
     },
 
     {
@@ -91,7 +91,7 @@ export const initialCards = [{
 Ума холодных наблюдений
 И сердца горестных замет.`,
     dataTag: 'animals',
-    likes: '325'
+    votes: '325'
     },
 
     {
@@ -132,7 +132,7 @@ export const initialCards = [{
 Ума холодных наблюдений
 И сердца горестных замет.`,
     dataTag: 'smoke',
-    likes: '9343'
+    votes: '9343'
     },
 
     {
@@ -156,7 +156,7 @@ export const initialCards = [{
 Ума холодных наблюдений
 И сердца горестных замет.`,
     dataTag: 'welfare',
-    likes: '8100'
+    votes: '8100'
     }
 ];
 

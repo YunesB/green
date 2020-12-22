@@ -160,10 +160,30 @@
       </div>
     </div>
     <div class="popup" id="initiativePopup">
-      <div class="popup__container">
-        <h3 class="popup__heading">Test</h3>
-        <p class="popup__text">Test</p>
-        <button class="popup__close"></button>
+      <div class="popup__container popup__container_alt-dimensions">
+        <h3 class="popup__heading popup__heading_colored">Test</h3>
+        <div class="popup__alt-align">
+          <div class="popup__text-container">
+            <pre class="popup__poem-text"><p class="popup__text">Test</p></pre>
+            <button class="popup__close"></button>
+          </div>
+          <div class="popup__chart-container">
+            <div class="circle-chart-container">
+              <!-- Код не мой - взят отсюда: https://codeconvey.com/css-percentage-circle/ 
+              Нужен просто для демонстрации возможного функционала. -->
+              <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" xmlns="http://www.w3.org/2000/svg">
+                <circle stroke="#efefef" stroke-width=".5" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                <circle class="circle-chart-circle" stroke="#360" stroke-width="2" stroke-dasharray="54" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+              </svg>
+              <span class="circle-chart-percentage circle-chart-one-percentage">29.1%</span>
+            </div>
+            <div class="popup__votes-info">
+              <p class="popup__vote-text">Автор инициативы: <span class="green-coloring">Иван Иванов</span></p>
+              <p class="popup__vote-text">Дата создания: <span class="green-coloring">01.01.2021</span></p>
+              <p class="popup__vote-text">Голосование завершится: <span class="green-coloring">01.03.2021</span></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <a href="#header" class="scroll-up">Наверх</a>

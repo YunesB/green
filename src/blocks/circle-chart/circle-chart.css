@@ -1,0 +1,44 @@
+/* Код не мой - взят отсюда: https://codeconvey.com/css-percentage-circle/ 
+Нужен просто для демонстрации возможного функционала.*/
+
+.circle-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clear: left;
+  float: left;
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+}
+
+.circle-chart {
+  max-width: 250px;
+  overflow: visible;
+}
+
+.circle-chart-circle {
+  animation: circle-chart-fill 1.35s reverse;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.circle-chart-percentage {
+  -webkit-animation: fade-in-text 2.2s 0.1s forwards;
+  -moz-animation: fade-in-text 2.2s 0.1s forwards;
+  animation: fade-in-text 2.2s 0.1s forwards;
+  font-size: 35px;
+  font-weight: 700;
+  position: absolute;
+}
+
+.circle-chart-one-percentage {
+  color: #360;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}

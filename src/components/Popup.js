@@ -7,6 +7,9 @@ export class Popup {
     open() {
         this._popup.classList.add('popup_opened');
         document.addEventListener('keyup', this.handleEscClose);
+        this._popup.querySelector('.circle-chart-circle').animate([
+            { strokeDasharray: 100 }, { strokeDasharray: 54 }
+        ], { duration: 800 });
     }
 
     close() {
@@ -18,6 +21,12 @@ export class Popup {
         if (evt.key === "Escape") {
             this.close();
         };
+    }
+
+    updatePopupInfo(data) {
+        this._popup.querySelector('.popup__heading').textContent = data.header;
+        this._popup.querySelector('.popup__text').textContent = data.poem;
+        this._popup.querySelector('.circle-chart-percentage').textContent = data.votes;
     }
 
     setEventListeners() {
