@@ -9,8 +9,6 @@ import {aboutLink, hintButton, searchPoem, refreshList,
     categories, cardsList, userElement, userMenu
     } from '../../src/utils/constants.js';
 
-import { CircularProgress } from '@material-ui/core';
-
 const aboutPopup = new Popup('aboutPopup');
 aboutPopup.setEventListeners();
 
@@ -79,7 +77,7 @@ const createCard = (data) => {
     const card = new Card({
         data,
         handleCardClick: () => {
-            cardPopup.open();
+            cardPopup.open(data);
             cardPopup.updatePopupInfo(data);
         }
     }, "#cardTemplate");

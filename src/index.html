@@ -53,12 +53,12 @@
           <div class="initiatives__nav">
             <select class="categories" id="categories">
               <option disabled selected hidden>Выберите категорию</option>
-              <option value="welfare">Благоустройство</option>
-              <option value="plastic">Пластик</option>
-              <option value="garbage">Мусор</option>
-              <option value="animals">Животные</option>
-              <option value="smoke">Алкоголь и курение</option>
-              <option value="">Без фильтра</option>
+              <option value="welfare" class="categories__content">Благоустройство</option>
+              <option value="plastic" class="categories__content">Пластик</option>
+              <option value="garbage" class="categories__content">Мусор</option>
+              <option value="animals" class="categories__content">Животные</option>
+              <option value="smoke" class="categories__content">Алкоголь и курение</option>
+              <option value="" class="categories__content">Без фильтра</option>
             </select>
             <div class="initiatives__arrows">
               <button type="button" class="initiatives__arrow initiatives__arrow_left"></button>
@@ -161,10 +161,10 @@
     </div>
     <div class="popup" id="initiativePopup">
       <div class="popup__container popup__container_alt-dimensions">
-        <h3 class="popup__heading popup__heading_colored">Test</h3>
+        <h3 class="popup__heading popup__heading_colored">Что-то пошло не так :(</h3>
         <div class="popup__alt-align">
           <div class="popup__text-container">
-            <pre class="popup__poem-text"><p class="popup__text">Test</p></pre>
+            <pre class="popup__poem-text"><p class="popup__text">Что-то пошло не так :(</p></pre>
             <button class="popup__close"></button>
           </div>
           <div class="popup__chart-container">
@@ -175,12 +175,13 @@
                 <circle stroke="#efefef" stroke-width=".5" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
                 <circle class="circle-chart-circle" stroke="#360" stroke-width="2" stroke-dasharray="54" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
               </svg>
-              <span class="circle-chart-percentage circle-chart-one-percentage">29.1%</span>
+              <span class="circle-chart-percentage circle-chart-one-percentage" id="voteCounter"></span>
             </div>
             <div class="popup__votes-info">
               <p class="popup__vote-text">Автор инициативы: <span class="green-coloring">Иван Иванов</span></p>
               <p class="popup__vote-text">Дата создания: <span class="green-coloring">01.01.2021</span></p>
               <p class="popup__vote-text">Голосование завершится: <span class="green-coloring">01.03.2021</span></p>
+              <button type="button" class="popup__vote-button">Проголосовать</button>
             </div>
           </div>
         </div>

@@ -4,12 +4,13 @@ export class Popup {
         this.handleEscClose = this._handleEscClose.bind(this);
     }
 
-    open() {
+    open(data) {
         this._popup.classList.add('popup_opened');
         document.addEventListener('keyup', this.handleEscClose);
         this._popup.querySelector('.circle-chart-circle').animate([
             { strokeDasharray: 100 }, { strokeDasharray: 54 }
         ], { duration: 800 });
+        this.animateValue('voteCounter', 0, data.votes, 800);
     }
 
     close() {
@@ -39,5 +40,20 @@ export class Popup {
         this._popup.querySelector('.popup__close').addEventListener('click', () => {
             this.close();
         });
+    }
+
+    // Код не мой, взял отсюда - https://stackoverflow.com/questions/16994662/count-animation-from-number-a-to-b
+    animateValue(id, start, end, duration) {
+        const obj = document.getElementById(id);
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
     }
 }
