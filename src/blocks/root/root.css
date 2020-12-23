@@ -238,10 +238,10 @@
 }
 
 .add-initiative__show-hint {
-  color: orangered;
+  color: red;
   font-weight: bold;
   background-color: unset;
-  border: 2px solid orangered;
+  border: 2px solid red;
   border-radius: 50%;
   transition: 0.2s;
 }
@@ -408,6 +408,8 @@
 .card:hover {
   /* transform: scale(1.01); */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(49, 223, 49, 0.1); */
+  cursor: pointer;
 }
 
 .card:nth-of-type(3) {
@@ -442,11 +444,6 @@
   color: black;
   margin: 0;
   padding: 15px;
-}
-
-.card__text:hover {
-  background-color: rgba(49, 223, 49, 0.1);
-  cursor: pointer;
 }
 
 .card__box {
@@ -522,6 +519,7 @@
 .new-initiative {
   max-width: 1140px;
   margin: 50px auto;
+  /* padding-bottom: 250px; */
 }
 
 .new-initiative__heading {
@@ -900,6 +898,11 @@
   top: -40px;
   right: -40px;
   padding: 0;
+}
+
+.popup__close:focus {
+  border: none;
+  outline: none;
 }
 
 .popup__close_alt {

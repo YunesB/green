@@ -48,7 +48,7 @@ export class Card {
         //     this._toggleLikestate()
         // });
 
-        this._element.querySelector('.card__text').addEventListener('click', () => {
+        this._element.addEventListener('click', () => {
             this.cardClick();
         })
     }
