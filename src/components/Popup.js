@@ -28,6 +28,7 @@ export class Popup {
         this._popup.querySelector('.popup__heading').textContent = data.header;
         this._popup.querySelector('.popup__text').textContent = data.poem;
         this._popup.querySelector('.circle-chart-percentage').textContent = data.votes;
+        this._popup.querySelector('#popupVoteName').textContent = data.author;
     }
 
     setEventListeners() {

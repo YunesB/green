@@ -10,6 +10,7 @@
   position: relative;
   max-width: 300px;
   width: 100%;
+  margin: 0 auto;
 }
 
 .circle-chart {

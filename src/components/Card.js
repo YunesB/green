@@ -44,9 +44,9 @@ export class Card {
     }
 
     _setEventListeners() {
-        this._element.querySelector('.card__button_like').addEventListener('click', () => {
-            this._toggleLikestate()
-        });
+        // this._element.querySelector('.card__button_like').addEventListener('click', () => {
+        //     this._toggleLikestate()
+        // });
 
         this._element.querySelector('.card__text').addEventListener('click', () => {
             this.cardClick();

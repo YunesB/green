@@ -47,6 +47,21 @@
         </div>
       </section>
 
+      <!-- <section class="initiatives">
+        <div class="initiatives__container">
+          <h3 class="popup__heading"><span class="green-coloring">ГРИН</span> – интернет-ресурс для размещения и рассмотрения экологических общественных инициатив</h3>
+          <p class="popup__text">Ресурс позволяет подать свою инициативу, ознакомиться с размещенными инициативами, проголосовать “за” или “против” размещенных инициатив, получить информацию о ходе и результатах реализации общественной инициативы.</p>
+          <p class="popup__text">Для того, чтобы подать инициативу или проголосовать за инициативу, нужно:</p>
+          <ul class="popup__list"> 
+            <li>Быть гражданином России старше 18 лет;</li>
+            <li>Иметь доступ к компьютеру, подключенному к Интернету;</li>
+            <li>Быть зарегистрированным на портале www.grin.ru;</li>
+            <li>Иметь сформулированную инициативу для того, чтобы предложить ее местным органам власти.</li>
+          </ul>
+          <p class="popup__text">Интернет-ресурс функционирует с применением единой системы авторизации и аутентификации: один человек – один голос.</p>
+        </div>
+      </section> -->
+
       <section class="initiatives" id="initiatives">
         <div class="initiatives__container">
           <h2 class="initiative_heading">Текущие инициативы</h2>
@@ -61,7 +76,7 @@
               <option value="" class="categories__content">Без фильтра</option>
             </select>
             <div class="initiatives__arrows">
-              <button type="button" class="initiatives__arrow initiatives__arrow_left"></button>
+              <button type="button" class="initiatives__arrow initiatives__arrow_left initiatives__arrow_disabled"></button>
               <button type="button" class="initiatives__arrow initiatives__arrow_right"></button>
             </div>
           </div>
@@ -104,7 +119,7 @@
             </a>
           </div>
           <div class="footer__section footer__section_news">
-            <h3 class="footer__heading">Новости</h3>
+            <h3 class="footer__heading">Подпишитесь</h3>
             <p class="footer__news-caption">Первыми узнавайте о принятых инициативах</p>
             <form class="footer__form">
               <input type="email" class="footer__input" placeholder="example@gmail.com">
@@ -178,9 +193,9 @@
               <span class="circle-chart-percentage circle-chart-one-percentage" id="voteCounter"></span>
             </div>
             <div class="popup__votes-info">
-              <p class="popup__vote-text">Автор инициативы: <span class="green-coloring">Иван Иванов</span></p>
-              <p class="popup__vote-text">Дата создания: <span class="green-coloring">01.01.2021</span></p>
-              <p class="popup__vote-text">Голосование завершится: <span class="green-coloring">01.03.2021</span></p>
+              <p class="popup__vote-text">Автор инициативы: <span class="green-coloring" id="popupVoteName">Скрыт</span></p>
+              <p class="popup__vote-text">Дата создания: <span class="green-coloring" id="popupDateFrom">01.01.2021</span></p>
+              <p class="popup__vote-text">Голосование завершится: <span class="green-coloring" id="popupDateDue">01.03.2021</span></p>
               <button type="button" class="popup__vote-button">Проголосовать</button>
             </div>
           </div>
@@ -202,10 +217,10 @@
       <h3 class="card__heading">Ужесточить нормы выбросов углекислого газа для новых автомобилей до 95 г/км</h3>
       <pre class="card__pre-text"><p class="card__text"></p></pre>
       <div class="card__box">
-        <div class="card__like-container">
+        <!-- <div class="card__like-container">
           <button type="button" class="card__button card__button_like"></button>
           <p class="card__like-counter">0</p>
-        </div>
+        </div> -->
         <p class="card__vote-caption">Всего голосов: <span class="card__vote-counter">0</span></p>
       </div>
     </li>

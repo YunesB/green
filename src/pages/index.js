@@ -6,7 +6,8 @@ import {initialCards} from '../../src/utils/constants.js';
 
 import {aboutLink, hintButton, searchPoem, refreshList,
     inputPoem, poemList, errorMessage, poemTextarea,
-    categories, cardsList, userElement, userMenu
+    categories, cardsList, userElement, userMenu,
+    goLeftArrow, goRightArrow, alternateCards
     } from '../../src/utils/constants.js';
 
 const aboutPopup = new Popup('aboutPopup');
@@ -42,7 +43,6 @@ function onsearchPoem(evt) {
     getAnswer(inputValue)
     .then(res => {
         if (res.length>0) {
-            console.log(res);
             for (let i=0; i<res.length; i++) {
                 const newItem = createListItem(res[i].fields, 'poemTemplate', inputValue, poemTextarea);
                 poemList.append(newItem);        
@@ -59,7 +59,6 @@ function onsearchPoem(evt) {
 function filterCards(list) {
     for (let item of list) {
         if (item.dataset.tags === categories.value || categories.value === '') {
-            console.log(item.dataset.tags)
             item.style.opacity = '1';
             item.style.filter = 'grayscale(0)';
         } else {
@@ -90,7 +89,14 @@ initialCards.forEach((item) => {
     createCard(item);
 })
 
-const cardsFilter = document.querySelectorAll('.card');
+function changeCards(data) {
+    cardsList.innerHTML = "";
+    data.forEach((item) => {
+        createCard(item);
+    });
+}
+
+let cardsFilter = document.querySelectorAll('.card');
 
 function getAnswer(data) {
     return fetch (`https://www.buymebuyme.xyz/?q=%20${data}%20`, {
@@ -119,3 +125,20 @@ aboutLink.addEventListener('click', () => {aboutPopup.open()});
 hintButton.addEventListener('mouseover', () => {hintPopup.open()});
 hintButton.addEventListener('mouseout', () => {hintPopup.close()});
 
+goLeftArrow.addEventListener('click', () => {
+    changeCards(initialCards);
+    goRightArrow.disabled = false;
+    goRightArrow.classList.remove('initiatives__arrow_disabled');
+    goLeftArrow.disabled = true;
+    goLeftArrow.classList.add('initiatives__arrow_disabled');
+    cardsFilter = document.querySelectorAll('.card')
+});
+
+goRightArrow.addEventListener('click', () => {
+    changeCards(alternateCards);
+    goLeftArrow.disabled = false;
+    goLeftArrow.classList.remove('initiatives__arrow_disabled');
+    goRightArrow.disabled = true;
+    goRightArrow.classList.add('initiatives__arrow_disabled');
+    cardsFilter = document.querySelectorAll('.card')
+});
