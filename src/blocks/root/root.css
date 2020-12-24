@@ -244,11 +244,16 @@
   border: 2px solid red;
   border-radius: 50%;
   transition: 0.2s;
+  margin-left: 10px;
 }
 
 .add-initiative__show-hint {
   cursor: help;
   opacity: 0.7;
+}
+
+.add-initiative__show-hint:focus {
+  outline: none;
 }
 
 .add-initiative__hint-box {
@@ -548,9 +553,16 @@
   flex-direction: column;
 }
 
+.new-initiative__field {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
 .new-initiative__input {
+  width: 100%;
   padding: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   border: none;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -558,9 +570,12 @@
 
 .new-initiative__input_textarea {
   min-height: 200px;
-  max-height: 600px;
-  height: 100%;
-  resize: vertical;
+  height: 470px;
+  resize: none;
+}
+
+.new-initiative__input_data_error {
+  color: red;
 }
 
 .new-initiative__input_textarea::-webkit-scrollbar {
@@ -577,10 +592,25 @@
   border-radius: 10px;
 }
 
+.new-initiative__error {
+  display: none;
+  color: black;
+  font-size: 12px;
+  line-height: 15px;
+  position: absolute;
+  top: calc(100% - 20px);
+  margin: 0;
+  padding: 0;
+}
+
+.new-initiative__error_visible {
+  display: flex;
+}
+
 .new-initiative__buttons {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 .new-initiative__submit {
@@ -970,7 +1000,7 @@
 }
 
 .poem__list-item:hover {
-  color: white;
+  color: black;
   background-color: rgba(49, 223, 49, 0.3);
 }
 
@@ -1026,14 +1056,14 @@
 }
 
 .button_disabled {
-  border: 1px solid white;
+  border: 1px solid black;
   background-color: unset;
-  color: white;
+  color: black;
   opacity: 0.3;
 }
 
 .button_disabled:hover {
-  border: 1px solid white;
+  border: 1px solid black;
   background-color: unset;
   cursor: default;
   opacity: 0.3;
@@ -1069,4 +1099,8 @@
 
 .hide-item {
   display: none;
+}
+
+.black-coloring {
+  color: black;
 }

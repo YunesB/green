@@ -4,7 +4,12 @@ export class Popup {
         this.handleEscClose = this._handleEscClose.bind(this);
     }
 
-    open(data) {
+    open() {
+        this._popup.classList.add('popup_opened');
+        document.addEventListener('keyup', this.handleEscClose);
+    }
+
+    openCard(data) {
         this._popup.classList.add('popup_opened');
         document.addEventListener('keyup', this.handleEscClose);
         this._popup.querySelector('.circle-chart-circle').animate([

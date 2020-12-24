@@ -2,13 +2,14 @@ import './index.css';
 import {Popup} from '../components/Popup.js';
 import {Constructor} from '../components/Constructor.js';
 import {Card} from '../components/Card.js';
-import {initialCards} from '../../src/utils/constants.js';
+import {FormValidator} from '../components/FormValidator.js';
 
 import {aboutLink, hintButton, searchPoem, refreshList,
     inputPoem, poemList, errorMessage, poemTextarea,
     categories, cardsList, userElement, userMenu,
-    goLeftArrow, goRightArrow, alternateCards
-    } from '../../src/utils/constants.js';
+    goLeftArrow, goRightArrow, cards, initiativeForm,
+    allSelectorClasses
+} from '../../src/utils/constants.js';
 
 const aboutPopup = new Popup('aboutPopup');
 aboutPopup.setEventListeners();
@@ -18,6 +19,9 @@ hintPopup.setEventListeners();
 
 const cardPopup = new Popup('initiativePopup');
 cardPopup.setEventListeners();
+
+const cardFormValidator = new FormValidator(allSelectorClasses, initiativeForm);
+cardFormValidator.enableValidation();
 
 
 function createListItem(data, template, inputValue, inputSelector) {
@@ -76,7 +80,7 @@ const createCard = (data) => {
     const card = new Card({
         data,
         handleCardClick: () => {
-            cardPopup.open(data);
+            cardPopup.openCard(data);
             cardPopup.updatePopupInfo(data);
         }
     }, "#cardTemplate");
@@ -85,21 +89,41 @@ const createCard = (data) => {
     cardsList.prepend(cardElement);
 };
 
-initialCards.forEach((item) => {
+cards.forEach((item) => {
     createCard(item);
-})
+});
 
-function changeCards(data) {
+let n = 0;
+
+function changeCards(data, button) {
     cardsList.innerHTML = "";
-    data.forEach((item) => {
+    const newCards = data.slice(n, n + 6);
+    newCards.forEach((item) => {
         createCard(item);
     });
+    if (n >= data.length) {
+        button.disabled = true;
+        button.classList.add('initiatives__arrow_disabled');
+    } else {
+        button.disabled = false;
+        button.classList.remove('initiatives__arrow_disabled');
+    }
+};
+
+function getInputValues(form) {
+    const inputList = form.querySelectorAll('.new-initiative__input');       
+    let formValues = {
+        votes: 0,
+        dataTag: 'N/A'
+    };
+    inputList.forEach(input => formValues[input.name] = input.value);
+    return formValues;
 }
 
 let cardsFilter = document.querySelectorAll('.card');
 
 function getAnswer(data) {
-    return fetch (`https://www.buymebuyme.xyz/?q=%20${data}%20`, {
+    return fetch (`http://www.buymebuyme.xyz/?q=%20${data}%20`, {
         method: 'GET'
     })
     .then((res) => {
@@ -126,19 +150,27 @@ hintButton.addEventListener('mouseover', () => {hintPopup.open()});
 hintButton.addEventListener('mouseout', () => {hintPopup.close()});
 
 goLeftArrow.addEventListener('click', () => {
-    changeCards(initialCards);
+    n = n - 6;
+    changeCards(cards, goLeftArrow);
     goRightArrow.disabled = false;
     goRightArrow.classList.remove('initiatives__arrow_disabled');
-    goLeftArrow.disabled = true;
-    goLeftArrow.classList.add('initiatives__arrow_disabled');
     cardsFilter = document.querySelectorAll('.card')
 });
 
 goRightArrow.addEventListener('click', () => {
-    changeCards(alternateCards);
+    n = n + 6;
+    changeCards(cards, goRightArrow);
     goLeftArrow.disabled = false;
     goLeftArrow.classList.remove('initiatives__arrow_disabled');
-    goRightArrow.disabled = true;
-    goRightArrow.classList.add('initiatives__arrow_disabled');
     cardsFilter = document.querySelectorAll('.card')
+});
+
+initiativeForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+    createCard(getInputValues(initiativeForm));
+    initiativeForm.reset();
+    window.scrollTo({
+        top: 500,
+        behavior: "smooth"
+    });
 });

@@ -39,28 +39,13 @@
         <h1 class="add-initiative__caption">Проект “<span class="green-coloring">ГР</span>ажданская <span class="green-coloring">ИН</span>ициатива” - не оставайтесь равнодушными, вносите и голосуйте за инициативы, от которых зависит наше будущее!</h1>
         <div class="add-initiative__box">
           <a href="#newInitiative" class="add-initiative__link">Внести инициативу</a>
-          <p class="add-initiative__sub-text">Постановление о внесении инициативы в стихотворной форме  <button type="button" class="add-initiative__show-hint">?</button></p>
+          <p class="add-initiative__sub-text black-coloring">Постановление о внесении инициативы в стихотворной форме  <button type="button" class="add-initiative__show-hint">?</button></p>
           <div class="add-initiative__hint-box" id="hintPopup">
             <p class="add-initiative__hint-text">В связи с действующим законодательством, с 01.01.2025 г. к рассмотрению принимаются только инициативы, сформулированные с использованием цитат поэтов-классиков.</p>
             <button class="popup__close popup__close_alt"></button>
           </div>
         </div>
       </section>
-
-      <!-- <section class="initiatives">
-        <div class="initiatives__container">
-          <h3 class="popup__heading"><span class="green-coloring">ГРИН</span> – интернет-ресурс для размещения и рассмотрения экологических общественных инициатив</h3>
-          <p class="popup__text">Ресурс позволяет подать свою инициативу, ознакомиться с размещенными инициативами, проголосовать “за” или “против” размещенных инициатив, получить информацию о ходе и результатах реализации общественной инициативы.</p>
-          <p class="popup__text">Для того, чтобы подать инициативу или проголосовать за инициативу, нужно:</p>
-          <ul class="popup__list"> 
-            <li>Быть гражданином России старше 18 лет;</li>
-            <li>Иметь доступ к компьютеру, подключенному к Интернету;</li>
-            <li>Быть зарегистрированным на портале www.grin.ru;</li>
-            <li>Иметь сформулированную инициативу для того, чтобы предложить ее местным органам власти.</li>
-          </ul>
-          <p class="popup__text">Интернет-ресурс функционирует с применением единой системы авторизации и аутентификации: один человек – один голос.</p>
-        </div>
-      </section> -->
 
       <section class="initiatives" id="initiatives">
         <div class="initiatives__container">
@@ -84,15 +69,53 @@
         </div>
       </section>
 
-      <section class="new-initiative" id="newInitiative">
+      <section class="new-initiative black-coloring" id="newInitiative">
         <h3 class="new-initiative__heading">Внести инициативу</h3>
-        <div class="new-initiative__container">
-          <form class="new-initiative__form">
+        <div class="new-initiative__container" novalidate>
+          <form class="new-initiative__form" id="initiativeForm">
             <h4 class="new-initiative__sub-heading">Заполните форму, чтобы подать заявку:</h4>
-            <input type="text" class="new-initiative__input" placeholder="Имя и Фамилия*">
-            <input type="email" class="new-initiative__input" placeholder="Email: exapmle@green.ru*">
-            <input type="text" class="new-initiative__input" placeholder="Номер документа*">
-            <textarea type="text" class="new-initiative__input new-initiative__input_textarea" placeholder="Введите текст стиха*" id="poemTextarea"></textarea>
+            <label class="new-initiative__field">
+              <input type="text" 
+                class="new-initiative__input" 
+                placeholder="Имя и Фамилия*" 
+                name="author" 
+                minlength="2" 
+                maxlength="20"
+                id="name-input"
+              >
+              <span class="new-initiative__error" id="name-input-error"></span>
+            </label>
+            <label class="new-initiative__field">
+              <input type="email" 
+                class="new-initiative__input" 
+                placeholder="Email: exapmle@green.ru*" 
+                name="email"
+                id="email-input"
+              >
+              <span class="new-initiative__error" id="email-input-error"></span>
+            </label>
+            <label class="new-initiative__field">
+              <input type="text" 
+                class="new-initiative__input" 
+                placeholder="Заголовок*" 
+                name="header" 
+                minlength="2" 
+                maxlength="30"
+                id="header-input"
+              >
+              <span class="new-initiative__error" id="header-input-error"></span>
+            </label>
+            <label class="new-initiative__field">
+              <textarea type="text" 
+                class="new-initiative__input new-initiative__input_textarea" 
+                placeholder="Введите текст стиха*" 
+                name="poem"
+                minlength="2" 
+                maxlength="100"
+                id="poemTextarea" 
+              ></textarea>
+              <span class="new-initiative__error" id="poemTextarea-error"></span>
+            </label>
             <button type="submit" class="new-initiative__submit" id="submitInitiative">Отправить</button>
           </form>
           <form class="new-initiative__form-poem">
