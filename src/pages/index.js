@@ -174,12 +174,3 @@ initiativeForm.addEventListener('submit', (evt) => {
         behavior: "smooth"
     });
 });
-
-<<<<<<< HEAD
-// Test
-const a = [1,2,3];
-const b = 1234523;
-// Test
-=======
-const a = 1000;
->>>>>>> b0e154e9d3b781f35469cb5f50518b6f170f0a20
