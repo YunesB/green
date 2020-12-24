@@ -22,7 +22,7 @@ cardPopup.setEventListeners();
 
 const cardFormValidator = new FormValidator(allSelectorClasses, initiativeForm);
 cardFormValidator.enableValidation();
-
+cardFormValidator.disableSubmitButton();
 
 function createListItem(data, template, inputValue, inputSelector) {
     const newConstructor = new Constructor(data, template, inputValue, inputSelector);
