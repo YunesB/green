@@ -23,7 +23,6 @@ export class FormValidator {
       input.classList.add(this._inputErrorClass);
       inputError.textContent = errorMessage;
       inputError.classList.add(this._errorClass);
-      console.log(errorMessage)
     }
   
     _hideInputError(input) {
@@ -42,7 +41,6 @@ export class FormValidator {
     };
   
     _hasInvalidInput() {
-      console.log(this._inputList);
       return this._inputList.some((input) => {
         return !input.validity.valid;
       })

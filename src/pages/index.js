@@ -23,6 +23,7 @@ cardPopup.setEventListeners();
 const cardFormValidator = new FormValidator(allSelectorClasses, initiativeForm);
 cardFormValidator.enableValidation();
 
+cardFormValidator.disableSubmitButton();
 
 
 function createListItem(data, template, inputValue, inputSelector) {
@@ -87,10 +88,10 @@ const createCard = (data) => {
     }, "#cardTemplate");
         
     const cardElement = card.generateCard();
-    cardsList.prepend(cardElement);
+    cardsList.append(cardElement);
 };
 
-cards.forEach((item) => {
+cards.slice(0, 6).forEach((item) => {
     createCard(item);
 });
 
@@ -102,7 +103,9 @@ function changeCards(data, button) {
     newCards.forEach((item) => {
         createCard(item);
     });
-    if (n >= data.length) {
+    console.log("n: " + n);
+    console.log("data.length: " + data.length);
+    if (n >= data.length - 6 || n === 0) {
         button.disabled = true;
         button.classList.add('initiatives__arrow_disabled');
     } else {
@@ -168,10 +171,15 @@ goRightArrow.addEventListener('click', () => {
 
 initiativeForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
-    createCard(getInputValues(initiativeForm));
+    cards.unshift(getInputValues(initiativeForm));
     initiativeForm.reset();
     window.scrollTo({
         top: 500,
         behavior: "smooth"
     });
+    cardsList.innerHTML = ""
+    cards.slice(0, 6).forEach((item) => {
+        createCard(item);
+    });
+    console.log(getInputValues(initiativeForm));
 });
