@@ -24,6 +24,7 @@ const cardFormValidator = new FormValidator(allSelectorClasses, initiativeForm);
 cardFormValidator.enableValidation();
 
 
+
 function createListItem(data, template, inputValue, inputSelector) {
     const newConstructor = new Constructor(data, template, inputValue, inputSelector);
     return newConstructor.generateItem();
