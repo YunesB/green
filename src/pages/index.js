@@ -175,6 +175,4 @@ initiativeForm.addEventListener('submit', (evt) => {
     });
 });
 
-// Test
-const a = [1,2,3];
-// Test
+const a = 1000;
