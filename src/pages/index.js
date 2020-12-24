@@ -3,6 +3,7 @@ import {Popup} from '../components/Popup.js';
 import {Constructor} from '../components/Constructor.js';
 import {Card} from '../components/Card.js';
 import {FormValidator} from '../components/FormValidator.js';
+import {smooothScroll} from '../components/Scroll.js';
 
 import {aboutLink, hintButton, searchPoem, refreshList,
     inputPoem, poemList, errorMessage, poemTextarea,
@@ -10,6 +11,8 @@ import {aboutLink, hintButton, searchPoem, refreshList,
     goLeftArrow, goRightArrow, cards, initiativeForm,
     allSelectorClasses
 } from '../../src/utils/constants.js';
+
+smooothScroll();
 
 const aboutPopup = new Popup('aboutPopup');
 aboutPopup.setEventListeners();
@@ -22,9 +25,7 @@ cardPopup.setEventListeners();
 
 const cardFormValidator = new FormValidator(allSelectorClasses, initiativeForm);
 cardFormValidator.enableValidation();
-
 cardFormValidator.disableSubmitButton();
-
 
 function createListItem(data, template, inputValue, inputSelector) {
     const newConstructor = new Constructor(data, template, inputValue, inputSelector);
@@ -103,8 +104,6 @@ function changeCards(data, button) {
     newCards.forEach((item) => {
         createCard(item);
     });
-    console.log("n: " + n);
-    console.log("data.length: " + data.length);
     if (n >= data.length - 6 || n === 0) {
         button.disabled = true;
         button.classList.add('initiatives__arrow_disabled');
@@ -174,12 +173,11 @@ initiativeForm.addEventListener('submit', (evt) => {
     cards.unshift(getInputValues(initiativeForm));
     initiativeForm.reset();
     window.scrollTo({
-        top: 500,
+        top: 700,
         behavior: "smooth"
     });
     cardsList.innerHTML = ""
     cards.slice(0, 6).forEach((item) => {
         createCard(item);
     });
-    console.log(getInputValues(initiativeForm));
 });

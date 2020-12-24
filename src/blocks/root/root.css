@@ -594,7 +594,8 @@
 
 .new-initiative__error {
   display: none;
-  color: black;
+  color: #360;
+  font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   position: absolute;
