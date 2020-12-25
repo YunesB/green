@@ -1,7 +1,6 @@
 import './index.css';
 import {Popup} from '../components/Popup.js';
-import {Constructor} from '../components/Constructor.js';
-import {Card} from '../components/Card.js';
+import { PopupWithStats } from '../components/PopupWithStats';
 import {FormValidator} from '../components/FormValidator.js';
 import {smooothScroll} from '../components/Scroll.js';
 
@@ -12,35 +11,30 @@ import {aboutLink, hintButton, searchPoem, refreshList,
     allSelectorClasses
 } from '../../src/utils/constants.js';
 
-smooothScroll();
+import {clearList, filterCards, getAnswer, 
+    createCard, getInputValues, createListItem
+} from '../utils/utils.js'
 
+
+smooothScroll();
+let n = 0;
+
+// creation of class elements
 const aboutPopup = new Popup('aboutPopup');
 aboutPopup.setEventListeners();
 
 const hintPopup = new Popup('hintPopup');
 hintPopup.setEventListeners();
 
-const cardPopup = new Popup('initiativePopup');
+export const cardPopup = new PopupWithStats('initiativePopup');
 cardPopup.setEventListeners();
 
 const cardFormValidator = new FormValidator(allSelectorClasses, initiativeForm);
 cardFormValidator.enableValidation();
 cardFormValidator.disableSubmitButton();
 
-function createListItem(data, template, inputValue, inputSelector) {
-    const newConstructor = new Constructor(data, template, inputValue, inputSelector);
-    return newConstructor.generateItem();
-};
 
-function clearList(list) {
-    list.innerHTML = ""
-    searchPoem.classList.remove('button_disabled')
-    searchPoem.disabled = false;
-    poemList.classList.remove('display-item');
-    errorMessage.classList.remove('display-item');
-};
-
-
+//general functions
 function onsearchPoem(evt) {
     evt.preventDefault();
     poemList.classList.add('display-item');
@@ -63,40 +57,9 @@ function onsearchPoem(evt) {
     })
 };
 
-function filterCards(list) {
-    for (let item of list) {
-        if (item.dataset.tags === categories.value || categories.value === '') {
-            item.style.opacity = '1';
-            item.style.filter = 'grayscale(0)';
-        } else {
-            item.style.opacity = '.3';
-            item.style.filter = 'grayscale(100%)';
-        }
-    }
-};
-
 categories.onchange = function() {
     filterCards(cardsFilter);
 };
-
-const createCard = (data) => {
-    const card = new Card({
-        data,
-        handleCardClick: () => {
-            cardPopup.openCard(data);
-            cardPopup.updatePopupInfo(data);
-        }
-    }, "#cardTemplate");
-        
-    const cardElement = card.generateCard();
-    cardsList.append(cardElement);
-};
-
-cards.slice(0, 6).forEach((item) => {
-    createCard(item);
-});
-
-let n = 0;
 
 function changeCards(data, button) {
     cardsList.innerHTML = "";
@@ -113,30 +76,15 @@ function changeCards(data, button) {
     }
 };
 
-function getInputValues(form) {
-    const inputList = form.querySelectorAll('.new-initiative__input');       
-    let formValues = {
-        votes: 0,
-        dataTag: 'N/A'
-    };
-    inputList.forEach(input => formValues[input.name] = input.value);
-    return formValues;
-}
+// initial cards
+cards.slice(0, 6).forEach((item) => {
+    createCard(item);
+});
 
 let cardsFilter = document.querySelectorAll('.card');
 
-function getAnswer(data) {
-    return fetch (`http://www.buymebuyme.xyz/?q=%20${data}%20`, {
-        method: 'GET'
-    })
-    .then((res) => {
-        return res.json();
-    })
-    .catch((res) => {
-        return Promise.reject(`Ошибка: ${res.status} - ${res.statusText}`);
-    })
-};
 
+// Event Listeners
 searchPoem.addEventListener('click', onsearchPoem);
 document.addEventListener('click', (evt) => {
     if (evt.target === userElement) {

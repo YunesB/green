@@ -1,4 +1,4 @@
-export class Constructor {
+export class ListItem {
     constructor(data, poemTemplate, externalStr, inputSelector) {
         this._name = data.name,
         this._author = data.author,

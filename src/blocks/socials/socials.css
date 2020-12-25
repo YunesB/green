@@ -1,0 +1,18 @@
+.socials {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.socials__item {
+  margin-right: 15px;
+  transition: 0.2s;
+}
+
+.socials__item:last-of-type {
+  margin: 0;
+}
+
+.socials__item:hover {
+  opacity: 0.7;
+}

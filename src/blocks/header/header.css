@@ -6,9 +6,146 @@
   position: relative;
 }
 
-/* @media screen and (max-width: 425px) {
-  .header {
-    padding-top: 28px;
-    padding-bottom: 31.6px;
-  }
-} */
+.header__navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-link {
+  padding: 0;
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__links {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__link-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 40px 0 0;
+}
+
+.header__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: unset;
+  transition: 0.2s;
+  font-size: 16px;
+  line-height: 24px;
+  transition: 0.2s;
+}
+
+.header__link:hover {
+  padding-bottom: 5px;
+  border-bottom: 1px solid white;
+}
+
+.header__form {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.header__input {
+  height: 24px;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: unset;
+  display: block;
+  color: white;
+}
+
+.header__input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.header__submit {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/search_icon_white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  background-color: unset;
+  margin-right: 20px;
+  transition: 0.2s;
+}
+
+.header__submit:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.header__userpic-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: unset;
+  border: none;
+}
+
+.header__userpic {
+  width: 35px;
+  height: 35px;
+  transition: 0.2s;
+}
+
+.header__userpic:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.header__menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  position: absolute;
+  bottom: -40px;
+  right: -120px;
+  background-color: white;
+  width: 170px;
+  display: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.header__menu-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.header__menu-link {
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: black;
+  text-decoration: none;
+}
+
+.header__menu-link:hover {
+  background-color: #360;
+  color: white;
+}
