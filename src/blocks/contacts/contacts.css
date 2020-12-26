@@ -9,6 +9,12 @@
   margin: 0;
 }
 
+@media all and (max-width: 376px) {
+  .contacts {
+    align-items: flex-start;
+  }
+}
+
 .contacts__item {
   display: flex;
   margin: 0;

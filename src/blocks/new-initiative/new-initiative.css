@@ -112,3 +112,30 @@
   display: flex;
   flex-direction: column;
 }
+
+@media all and (max-width: 376px) {
+  .new-initiative__form-poem {
+    width: 80%;
+  }
+  .new-initiative__input {
+    width: 100%;
+  }
+  .new-initiative__container {
+    margin: auto;
+    grid-template-columns: repeat(1, 100%);
+  }
+  .new-initiative {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+  .new-initiative__input_textarea {
+    height: 250px;
+  }
+  .new-initiative__sub-heading {
+    font-size: 18px;
+  }
+  .new-initiative__form {
+    max-width: 375px;
+  }
+}
