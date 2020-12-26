@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="../src/images/icon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./images/icon.ico" type="image/x-icon" />
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
@@ -51,6 +51,18 @@
         </div>
       </nav>
     </header>
+    <div class="not-supported-resolution">
+      <h1 class="not-supported-resolution__heading">Уважаемый Гражданин!</h1>
+      <p class="not-supported-resolution__text">К сожалению, наш сайт недоступен на Вашем устройстве.</p>
+      <p class="not-supported-resolution__text">Пожалуйста, воспользуйтесь
+        мобильной версией (для устройств до 425px), либо версией для компьюера (от 800px).</p>
+      <p class="not-supported-resolution__text">Приносим свои извинения, версия для Вашего разрешения уже в разработке.
+      </p>
+      <div class="not-supported-resolution__container">
+        <p class="not-supported-resolution__credit">С уважением, DevTeam#22</p>
+        <img src="images/logo.svg" class="not-supported-resolution__logo">
+      </div>
+    </div>
     <main class="content">
       <section class="add-initiative">
         <div class="add-initiative__text-box">
@@ -140,7 +152,7 @@
             </label>
             <label class="new-initiative__field">
               <textarea type="text" class="new-initiative__input new-initiative__input_textarea"
-                placeholder="Введите текст стиха*" name="poem" minlength="2" maxlength="1000" id="poemTextarea"
+                placeholder="Введите текст стиха*" name="poem" minlength="2" maxlength="5000" id="poemTextarea"
                 required></textarea>
               <span class="new-initiative__error" id="poemTextarea-error"></span>
             </label>
@@ -163,7 +175,8 @@
               </button>
             </div>
             <ul class="poem poem__list" id="poemList">
-             
+              <li class="poem__loader">
+              </li>
             </ul>
           </form>
         </div>

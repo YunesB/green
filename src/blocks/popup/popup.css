@@ -52,10 +52,10 @@
   background-position: center;
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   position: absolute;
-  top: -35px;
+  top: -55px;
   left: -25px;
   padding: 0;
 }

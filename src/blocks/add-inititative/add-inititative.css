@@ -116,7 +116,7 @@
   margin: 0;
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 425px) {
   .add-initiative {
     height: 380px;
   }

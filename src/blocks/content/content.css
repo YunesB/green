@@ -3,3 +3,9 @@
   padding: 0;
   margin: 0 auto;
 }
+
+@media screen and (min-width: 450px) and (max-width: 1000px) {
+  .content {
+    display: none;
+  }
+}

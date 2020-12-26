@@ -150,6 +150,12 @@
   color: white;
 }
 
+@media screen and (min-width: 450px) and (max-width: 1000px) {
+  .header {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .header__navigation {
     margin: 0 auto;
