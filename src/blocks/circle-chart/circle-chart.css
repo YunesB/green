@@ -14,7 +14,7 @@
 }
 
 .circle-chart {
-  max-width: 250px;
+  max-width: 750px;
   overflow: visible;
 }
 
@@ -32,7 +32,7 @@
   -webkit-animation: fade-in-text 2.2s 0.1s forwards;
   -moz-animation: fade-in-text 2.2s 0.1s forwards;
   animation: fade-in-text 2.2s 0.1s forwards;
-  font-size: 35px;
+  font-size: 45px;
   font-weight: 700;
   position: absolute;
 }
@@ -41,5 +41,5 @@
   color: #360;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }

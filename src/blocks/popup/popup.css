@@ -37,8 +37,8 @@
 }
 
 .popup__container_alt-dimensions {
-  max-width: 900px;
-  padding: 25px 20px;
+  max-width: 1200px;
+  padding: 50px 0;
 }
 
 .popup__alt-align {
@@ -72,23 +72,44 @@
   font-size: 20px;
 }
 
+.popup__alt-heading {
+  margin: 0 0 20px;
+  text-align: left;
+  font-size: 40px;
+  line-height: 44px;
+  max-width: 100%;
+}
+
 .popup__heading_colored {
   color: #360;
-  max-width: 60%;
+}
+
+.popup__info-container {
+  display: flex;
+  margin: 15px 0;
+}
+
+.popup__icon {
+  margin-right: 11px;
+  width: 15px;
+  height: 15px;
 }
 
 .popup__text-container {
   min-width: 45%;
-  max-width: 55%;
   border: 2px solid #d3d3d3;
   /* background-color: #eae9e9; */
   border-radius: 15px;
 }
 
+.popup__data-box {
+  max-width: 50%;
+}
+
 .popup__poem-text {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 18px;
-  max-height: 400px;
+  max-height: 200px;
   overflow-y: scroll;
   padding-left: 25px;
   margin: 0;
@@ -135,7 +156,7 @@
   background-color: #360;
   color: white;
   margin: 10px 0;
-  padding: 15px;
+  padding: 15px 80px;
   border-radius: 5px;
   transition: 0.2s;
 }

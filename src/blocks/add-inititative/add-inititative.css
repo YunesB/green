@@ -28,6 +28,10 @@
   margin: 0;
 }
 
+.add-initiative__green-coloring {
+  color: #360;
+}
+
 .add-initiative__sub-caption {
   max-width: 800px;
   font-weight: normal;
