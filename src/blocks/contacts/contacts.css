@@ -17,3 +17,9 @@
 .contacts__icon {
   margin: 0 15px 0 0;
 }
+
+@media all and (max-width: 425px) {
+  .contacts {
+    align-items: flex-start;
+  }
+}

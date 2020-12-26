@@ -52,3 +52,9 @@
   color: #360;
   font-weight: bold;
 }
+
+@media all and (max-width: 425px) {
+  .scroll-up {
+    right: 10px;
+  }
+}

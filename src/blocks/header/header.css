@@ -149,3 +149,52 @@
   background-color: #360;
   color: white;
 }
+
+@media screen and (max-width: 376px) {
+  .header__navigation {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .header__container {
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 40%;
+  }
+
+  .header__links {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .header__link {
+    font-size: 12px;
+    text-align: right;
+  }
+
+  .header__link-item {
+    margin: 0;
+  }
+
+  .header__form {
+    display: none;
+  }
+
+  .header__userpic {
+    width: 25px;
+  }
+
+  .header__userpic-button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: unset;
+    border: none;
+    width: 25px;
+  }
+
+  .header__menu {
+    bottom: -80px;
+    right: -40px;
+  }
+}

@@ -46,3 +46,12 @@
 .categories__item_selected {
   background: #31df31;
 }
+
+@media screen and (max-width: 450px) {
+  .categories {
+    font-size: 10px;
+    color: white;
+    padding: 15px;
+    background-image: unset;
+  }
+}

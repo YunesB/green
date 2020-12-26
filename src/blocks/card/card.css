@@ -123,3 +123,14 @@
 .card__vote-counter {
   font-weight: bold;
 }
+
+@media screen and (max-width: 450px) {
+  .card {
+    max-width: 80%;
+    margin: 0 auto 15px;
+  }
+
+  .card__pre-text {
+    font-size: 11px;
+  }
+}

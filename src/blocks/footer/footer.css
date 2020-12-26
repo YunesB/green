@@ -90,3 +90,22 @@
   cursor: pointer;
   opacity: 0.7;
 }
+
+@media all and (max-width: 425px) {
+  .footer__container {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .footer__sections {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .footer__logo {
+    width: 50px;
+  }
+
+  .footer__section_contacts {
+    align-items: flex-start;
+  }
+}
