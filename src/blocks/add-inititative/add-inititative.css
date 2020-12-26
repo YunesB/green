@@ -15,12 +15,6 @@
   margin: 0 auto;
 }
 
-@media all and (max-width: 376px) {
-  .add-initiative {
-    display: none;
-  }
-}
-
 .add-initiative__text-box {
   margin: 0;
 }
