@@ -8,7 +8,7 @@ export function clearList(list) {
     searchPoem.classList.remove('button_disabled')
     searchPoem.disabled = false;
     poemList.classList.remove('display-item');
-    errorMessage.classList.remove('display-item');
+
 };
 
 export function filterCards(list) {

@@ -49,7 +49,10 @@ function onsearchPoem(evt) {
                 poemList.append(newItem);        
             }
         } else {
-            errorMessage.classList.add('display-item');
+            // errorMessage.classList.add('display-item');
+            poemList.innerHTML =  `<li class="poem__default-item display-item">
+            К сожалению, по данному запросу ничего не найдено.
+          </li>`
         }
     })
     .catch ((err) => {
@@ -118,6 +121,7 @@ goRightArrow.addEventListener('click', () => {
 
 initiativeForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
+    poemTextarea.textContent = '';
     cards.unshift(getInputValues(initiativeForm));
     initiativeForm.reset();
     window.scrollTo({

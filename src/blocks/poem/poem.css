@@ -4,6 +4,7 @@
 }
 
 .poem__list {
+<<<<<<< HEAD
   display: none;
   padding: 0;
   margin: 0;
@@ -15,6 +16,28 @@
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.3);
 }
+=======
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow-y: scroll;
+    max-height: 550px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  @media all and (max-width: 376px) {
+    .poem__list {
+        width: 115%;
+    }
+    .poem__text {
+        font-size: 8px;
+    }
+  }
+>>>>>>> ac97742d832dc8061b41038fc5fd06d5a66fa3b7
 
 .poem__list::-webkit-scrollbar {
   width: 5px;

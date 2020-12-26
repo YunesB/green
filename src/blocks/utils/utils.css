@@ -31,6 +31,12 @@
   font-weight: bold;
 }
 
+@media all and (max-width: 376px) {
+  .scroll-up {
+    right: 10px;
+  }
+}
+
 .scroll-up:hover {
   opacity: 1;
   cursor: pointer;
