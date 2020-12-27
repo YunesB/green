@@ -124,10 +124,18 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 425px) {
   .card {
     max-width: 80%;
     margin: 0 auto 15px;
+  }
+
+  .card:nth-of-type(3) {
+    margin: 0 auto 15px;
+  }
+
+  .card:last-of-type {
+    margin: 0 auto;
   }
 
   .card__pre-text {

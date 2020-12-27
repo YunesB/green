@@ -205,3 +205,74 @@
   cursor: pointer;
   opacity: 0.6;
 }
+
+@media all and (max-width: 425px) {
+  .popup__container {
+    max-width: 250px;
+  }
+
+  .popup__container_alt-dimensions {
+    max-width: 300px;
+    padding: 10px 0;
+  }
+
+  .popup__alt-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .popup__heading {
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .popup__logo {
+    width: 50px;
+    height: 50px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .popup__data-box {
+    max-width: 90%;
+  }
+
+  .popup__alt-heading {
+    margin: 0 0 20px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 22px;
+    max-width: 80%;
+  }
+
+  .popup__poem-text {
+    font-size: 14px;
+    max-height: 150px;
+    overflow-y: scroll;
+    padding-left: 15px;
+  }
+
+  .popup__vote-button {
+    max-width: 100%;
+  }
+
+  .popup__text {
+    font-size: 12px;
+  }
+
+  .popup__list {
+    font-size: 12px;
+    padding-left: 5px;
+  }
+
+  .popup__icon {
+    display: none;
+  }
+
+  .popup__vote-text {
+    max-width: 250px;
+    white-space: nowrap;
+  }
+}

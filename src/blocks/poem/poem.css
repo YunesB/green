@@ -120,6 +120,7 @@
 @media all and (max-width: 425px) {
   .poem__list {
     width: 115%;
+    margin-bottom: 50px;
   }
   .poem__text {
     font-size: 8px;

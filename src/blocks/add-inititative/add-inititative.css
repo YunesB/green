@@ -164,4 +164,10 @@
     margin-left: 5px;
     line-height: 14px;
   }
+
+  .add-initiative__hint-box {
+    right: 0px;
+    bottom: -160px;
+    width: 250px;
+  }
 }
