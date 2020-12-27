@@ -166,4 +166,5 @@ initiativeForm.addEventListener("submit", (evt) => {
   cards.slice(0, 6).forEach((item) => {
     createCard(item);
   });
+  cardsFilter = document.querySelectorAll(".card");
 });
