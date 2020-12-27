@@ -1,0 +1,144 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+  width: 310px;
+  height: 400px;
+  background-color: #eae9e9;
+  border-radius: 15px;
+  margin: 0 0 25px 0;
+  transition: 0.2s;
+  padding: 25px;
+}
+
+.card:hover {
+  /* transform: scale(1.01); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(49, 223, 49, 0.1); */
+  cursor: pointer;
+}
+
+.card:nth-of-type(3) {
+  margin: 0 0 25px 0;
+}
+
+.card:last-of-type {
+  margin: 0 0 25px 0;
+}
+
+.card__heading {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #360;
+  height: 20%;
+  margin: auto;
+}
+
+.card__pre-text {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 0;
+  height: 65%;
+  overflow-y: scroll;
+}
+
+.card__text {
+  font-family: "Roboto", "Arial", sans-serif;
+  color: black;
+  margin: 0;
+  padding: 15px;
+}
+
+.card__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 5px 5px;
+}
+
+.card__pre-text::-webkit-scrollbar {
+  width: 5px;
+}
+
+.card__pre-text::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.card__pre-text::-webkit-scrollbar-thumb {
+  background: #360;
+  opacity: 0.7;
+  border-radius: 10px;
+}
+
+.card__like-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: unset;
+  border: none;
+  margin-right: 10px;
+  transition: 0.2s;
+}
+
+.card__button:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+  opacity: 0.7;
+}
+
+/* not used */
+.card__button_like {
+  background-image: url("../../images/heart_icon_green.svg");
+}
+
+.card__button_dislike {
+  background-image: url("../../images/dislike_icon.svg");
+}
+
+.card__button_like_state_posted {
+  background-image: url("../../images/heart_icon_active.svg");
+}
+
+.card__like-counter {
+  margin: 0;
+}
+
+.card__vote-caption {
+  color: #360;
+  margin: 0;
+}
+
+.card__vote-counter {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 425px) {
+  .card {
+    max-width: 80%;
+    margin: 0 auto 15px;
+  }
+
+  .card:nth-of-type(3) {
+    margin: 0 auto 15px;
+  }
+
+  .card:last-of-type {
+    margin: 0 auto;
+  }
+
+  .card__pre-text {
+    font-size: 11px;
+  }
+}

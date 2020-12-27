@@ -1,15 +1,40 @@
 /* Общие */
 @import url("../vendor/normalize.css");
 @import url("../blocks/root/root.css");
-@import url("../fonts/inter_web/inter.css");
+@import url("../blocks/circle-chart/circle-chart.css");
 
 /* Шапка сайта, блок header */
 @import url("../blocks/header/header.css");
 @import url("../blocks/header/__logo/header__logo.css");
 
+@import url("../blocks/not-supported-resolution/not-supported-resolution.css");
+
 /* Main content */
 @import url("../blocks/content/content.css");
 
-/* Подвал сайта, блок footer */
+/* Initiatives */
+@import url("../blocks/add-inititative/add-inititative.css");
+@import url("../blocks/initiatives/initiatives.css");
+
+/* Cards */
+@import url("../blocks/categories/categories.css");
+@import url("../blocks/cards/cards.css");
+@import url("../blocks/card/card.css");
+
+/* New Initiative */
+@import url("../blocks/new-initiative/new-initiative.css");
+
+/* Footer */
 @import url("../blocks/footer/footer.css");
 @import url("../blocks/footer/__credit/footer__credit.css");
+@import url("../blocks/contacts/contacts.css");
+@import url("../blocks/socials/socials.css");
+
+/* Popup */
+@import url("../blocks/popup/popup.css");
+
+/* Poem */
+@import url("../blocks/poem/poem.css");
+
+/* utils */
+@import url("../blocks/utils/utils.css");
